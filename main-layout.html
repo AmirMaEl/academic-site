@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Site Title</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="wrapper">
+    <header class="site-header" role="banner">
+      <div class="site-header__inner">
+        <a class="branding" href="index.html">Your Name</a>
+        <button class="nav-toggle" type="button" aria-label="Toggle navigation" aria-controls="primary-navigation" aria-expanded="false">
+          <span class="nav-toggle__line"></span>
+          <span class="nav-toggle__line"></span>
+          <span class="nav-toggle__line"></span>
+        </button>
+        <nav class="site-nav" id="primary-navigation" aria-label="Primary navigation" data-open="false">
+          <ul class="site-nav__list">
+            <li><a class="site-nav__link" href="index.html">Home</a></li>
+            <li><a class="site-nav__link" href="publications.html">Publications</a></li>
+            <li><a class="site-nav__link" href="teaching.html">Teaching</a></li>
+            <li><a class="site-nav__link" href="blog.html">Blog</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main role="main">
+      <!-- Page-specific content goes here -->
+    </main>
+  </div>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="site-footer__inner">
+      <p class="site-footer__meta">© <span id="current-year">2025</span> Your Name. All rights reserved.</p>
+      <div class="site-footer__social" aria-label="Social links">
+        <a class="site-footer__social-link" href="https://twitter.com/" target="_blank" rel="noopener noreferrer">Twitter · X</a>
+        <a class="site-footer__social-link" href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <a class="site-footer__social-link" href="https://github.com/" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <a class="site-footer__social-link" href="https://scholar.google.com/" target="_blank" rel="noopener noreferrer">Google Scholar</a>
+      </div>
+    </div>
+  </footer>
+  <script>
+    (function () {
+      const navToggle = document.querySelector('.nav-toggle');
+      const nav = document.getElementById('primary-navigation');
+      const yearEl = document.getElementById('current-year');
+
+      if (yearEl) {
+        yearEl.textContent = new Date().getFullYear();
+      }
+
+      if (navToggle && nav) {
+        navToggle.addEventListener('click', function () {
+          const isOpen = nav.dataset.open === 'true';
+          const nextState = (!isOpen).toString();
+          nav.dataset.open = nextState;
+          navToggle.setAttribute('aria-expanded', nextState);
+        });
+
+        nav.querySelectorAll('a').forEach(function (link) {
+          link.addEventListener('click', function () {
+            nav.dataset.open = 'false';
+            navToggle.setAttribute('aria-expanded', 'false');
+          });
+        });
+      }
+    })();
+  </script>
+</body>
+</html>

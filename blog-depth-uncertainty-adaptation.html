@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Exploring Uncertainty and Adaptation in Depth Estimation · Your Name</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="wrapper">
+    <header class="site-header" role="banner">
+      <div class="site-header__inner">
+        <a class="branding" href="index.html#home">Your Name</a>
+        <button class="nav-toggle" type="button" aria-label="Toggle navigation" aria-controls="primary-navigation" aria-expanded="false">
+          <span class="nav-toggle__line"></span>
+          <span class="nav-toggle__line"></span>
+          <span class="nav-toggle__line"></span>
+        </button>
+        <nav class="site-nav" id="primary-navigation" aria-label="Primary navigation" data-open="false">
+          <ul class="site-nav__list">
+            <li><a class="site-nav__link" href="index.html#home">Home</a></li>
+            <li><a class="site-nav__link" href="index.html#publications">Publications</a></li>
+            <li><a class="site-nav__link" href="index.html#teaching">Teaching</a></li>
+            <li><a class="site-nav__link site-nav__link--active" href="index.html#blog">Blog</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main role="main">
+      <article>
+        <header class="post-header">
+          <p class="post-meta">December 29, 2025 · 6 minute read</p>
+          <h1 class="post-title">Exploring Uncertainty and Adaptation in Depth Estimation</h1>
+          <ul class="tag-list" aria-label="Post tags">
+            <li class="tag">#DepthEstimation</li>
+            <li class="tag">#ComputerVision</li>
+            <li class="tag">#ResearchUpdate</li>
+          </ul>
+        </header>
+
+        <div class="post-content">
+          <p>This month our group wrapped two complementary projects on monocular depth estimation that move the needle on both reliability and adaptability. One investigates how to quantify prediction confidence after a model has been trained, while the other introduces a lightweight route to bridge domain gaps without extra labels.</p>
+
+          <h2>Revisiting Gradient-Based Uncertainty</h2>
+          <p>In Revisiting Gradient-Based Uncertainty for Monocular Depth Estimation, Julia Hornauer, Amir El-Ghoussani, and Vasileios Belagiannis revisit post hoc confidence scoring. We show that gradients carry rich signals even when ground-truth depth is unavailable by encouraging consistency between predictions and a pseudo-reference depth. The method improves calibration on safety-critical benchmarks with negligible overhead.</p>
+          <ul>
+            <li>Benchmarks: KITTI and NYUv2 with strong gains in expected calibration error.</li>
+            <li>Deployment: No retraining required; works on top of existing models.</li>
+            <li>Read the paper: <a href="https://ieeexplore.ieee.org/iel8/34/4359286/10884813.pdf" target="_blank" rel="noopener noreferrer">IEEE TPAMI PDF</a></li>
+          </ul>
+
+          <h2>Consistency for Unsupervised Domain Adaptation</h2>
+          <p>Consistency Regularisation for Unsupervised Domain Adaptation in Monocular Depth Estimation, led by Amir El-Ghoussani, focuses on a different challenge: keeping performance stable as cameras, lighting, or environments change. We treat adaptation as a semi-supervised problem and introduce a perturbation-consistency loss that lets a single model traverse domains without elaborate training schedules.</p>
+          <ul>
+            <li>Simplicity: Train one network with a pairwise consistency loss, avoiding teacher–student setups.</li>
+            <li>Results: State-of-the-art accuracy on KITTI ↔ NYUv2 adaptation with improved robustness in ablations.</li>
+            <li>Resources: <a href="https://arxiv.org/abs/2405.17704" target="_blank" rel="noopener noreferrer">arXiv abstract</a> · <a href="https://github.com/AmirMaEl/SemiSupMDE" target="_blank" rel="noopener noreferrer">GitHub code</a></li>
+          </ul>
+
+          <h2>Putting the Pieces Together</h2>
+          <p>Together these studies cover both axes of dependable depth estimation: understanding when predictions might fail and adapting the model when the world shifts. Our next steps involve combining the uncertainty estimator with the domain adaptation pipeline to drive data selection, and assessing how uncertainty-aware adaptation can guide active learning.</p>
+
+          <h2>Acknowledgements</h2>
+          <p>Huge thanks to Julia, Amir, Gustavo, and Vasileios for their collaborative energy, and to the TPAMI and CoLLAs reviewers for constructive feedback. If you are experimenting with depth estimation in the wild, I would love to hear how these tools serve your workflows.</p>
+        </div>
+      </article>
+    </main>
+  </div>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="site-footer__inner">
+      <p class="site-footer__meta">© <span id="current-year">2025</span> Your Name. All rights reserved.</p>
+      <div class="site-footer__social" aria-label="Social links">
+        <a class="site-footer__social-link" href="https://twitter.com/" target="_blank" rel="noopener noreferrer">Twitter · X</a>
+        <a class="site-footer__social-link" href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <a class="site-footer__social-link" href="https://github.com/" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <a class="site-footer__social-link" href="https://scholar.google.com/" target="_blank" rel="noopener noreferrer">Google Scholar</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      const navToggle = document.querySelector('.nav-toggle');
+      const nav = document.getElementById('primary-navigation');
+      const yearEl = document.getElementById('current-year');
+
+      if (yearEl) {
+        yearEl.textContent = new Date().getFullYear();
+      }
+
+      if (navToggle && nav) {
+        const navLinks = nav.querySelectorAll('.site-nav__link');
+
+        navToggle.addEventListener('click', function () {
+          const isOpen = nav.dataset.open === 'true';
+          const nextState = (!isOpen).toString();
+          nav.dataset.open = nextState;
+          navToggle.setAttribute('aria-expanded', nextState);
+        });
+
+        navLinks.forEach(function (link) {
+          link.addEventListener('click', function () {
+            nav.dataset.open = 'false';
+            navToggle.setAttribute('aria-expanded', 'false');
+
+            navLinks.forEach(function (item) {
+              item.classList.remove('site-nav__link--active');
+            });
+            link.classList.add('site-nav__link--active');
+          });
+        });
+      }
+    })();
+  </script>
+</body>
+</html>

@@ -1,0 +1,295 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Your Name · Academic Homepage</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="wrapper">
+    <header class="site-header" role="banner">
+      <div class="site-header__inner">
+        <a class="branding" href="#home">Your Name</a>
+        <button class="nav-toggle" type="button" aria-label="Toggle navigation" aria-controls="primary-navigation" aria-expanded="false">
+          <span class="nav-toggle__line"></span>
+          <span class="nav-toggle__line"></span>
+          <span class="nav-toggle__line"></span>
+        </button>
+        <nav class="site-nav" id="primary-navigation" aria-label="Primary navigation" data-open="false">
+          <ul class="site-nav__list">
+            <li><a class="site-nav__link site-nav__link--active" href="#home">Home</a></li>
+            <li><a class="site-nav__link" href="#publications">Publications</a></li>
+            <li><a class="site-nav__link" href="#teaching">Teaching</a></li>
+            <li><a class="site-nav__link" href="#blog">Blog</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main role="main">
+      <section id="home" aria-labelledby="profile-heading">
+        <div class="profile-card">
+          <div class="profile-card__image-wrapper" aria-hidden="true">
+            <img class="profile-card__image" src="assets/profile.jpg" alt="Your Name portrait">
+          </div>
+          <div class="profile-card__meta">
+            <h1 class="profile-card__name" id="profile-heading">Your Name</h1>
+            <p class="profile-card__role">Assistant Professor of Computer Science</p>
+            <p class="profile-card__affiliation">Department of Computer Science, Example University</p>
+          </div>
+        </div>
+      </section>
+
+      <section aria-labelledby="bio-heading">
+        <h2 class="section-heading" id="bio-heading">Research Focus</h2>
+        <p class="bio">I investigate machine learning systems that are robust, trustworthy, and human-centered, with current projects exploring interpretability, responsible AI deployment, and interdisciplinary collaborations that connect computational methods with the social sciences.</p>
+      </section>
+
+      <section aria-labelledby="news-heading">
+        <h2 class="section-heading" id="news-heading">News & Updates</h2>
+        <ul class="updates-list">
+          <li class="updates-list__item"><strong>December 2025.</strong> Paper accepted at ICML 2026 on interpretable deep learning.</li>
+          <li class="updates-list__item"><strong>October 2025.</strong> Invited keynote at the Responsible AI Symposium hosted by Example University.</li>
+          <li class="updates-list__item"><strong>August 2025.</strong> Awarded NSF CAREER grant to study human-aligned machine learning models.</li>
+        </ul>
+      </section>
+
+      <section aria-labelledby="contact-heading">
+        <h2 class="section-heading" id="contact-heading">Contact</h2>
+        <div class="contact-card">
+          <div class="contact-card__item">
+            <span class="contact-card__label">Email</span>
+            <span class="contact-card__value"><a href="mailto:yourname@university.edu">yourname@university.edu</a></span>
+          </div>
+          <div class="contact-card__item">
+            <span class="contact-card__label">Office</span>
+            <span class="contact-card__value">Room 123, Science Building, Example University</span>
+          </div>
+        </div>
+      </section>
+
+      <section id="publications" aria-labelledby="publications-heading">
+        <h2 class="section-heading" id="publications-heading">Selected Publications</h2>
+        <div class="publications-list" data-publications-list>
+          <article class="publication-card publication-card--loading">
+            <p>Loading publications...</p>
+          </article>
+        </div>
+        <noscript>
+          <div class="publications-list">
+            <article class="publication-card">
+              <h3 class="publication-card__title"><strong>Revisiting Gradient-Based Uncertainty for Monocular Depth Estimation</strong></h3>
+              <p class="publication-card__meta">Julia Hornauer, Amir El-Ghoussani, Vasileios Belagiannis</p>
+              <p class="publication-card__venue">IEEE Transactions on Pattern Analysis and Machine Intelligence · 2025</p>
+              <div class="publication-actions">
+                <a class="publication-action" href="https://arxiv.org/abs/2502.05964" target="_blank" rel="noopener noreferrer">arXiv</a>
+                <a class="publication-action" href="https://arxiv.org/pdf/2502.05964" target="_blank" rel="noopener noreferrer">PDF</a>
+                <a class="publication-action" href="https://github.com/jhornauer/GrUMoDepth" target="_blank" rel="noopener noreferrer">Code</a>
+              </div>
+            </article>
+
+            <article class="publication-card">
+              <h3 class="publication-card__title"><strong>Consistency Regularisation for Unsupervised Domain Adaptation in Monocular Depth Estimation</strong></h3>
+              <p class="publication-card__meta">Amir El-Ghoussani, Julia Hornauer, Gustavo Carneiro, Vasileios Belagiannis</p>
+              <p class="publication-card__venue">Conference on Lifelong Learning Agents (CoLLAs) · 2024</p>
+              <div class="publication-actions">
+                <a class="publication-action" href="https://arxiv.org/abs/2405.17704" target="_blank" rel="noopener noreferrer">arXiv</a>
+                <a class="publication-action" href="https://arxiv.org/pdf/2405.17704" target="_blank" rel="noopener noreferrer">PDF</a>
+                <a class="publication-action" href="https://github.com/AmirMaEl/SemiSupMDE" target="_blank" rel="noopener noreferrer">Code</a>
+              </div>
+            </article>
+
+            <article class="publication-card">
+              <h3 class="publication-card__title"><strong>Learning Interpretable Representations for Responsible AI Systems</strong></h3>
+              <p class="publication-card__meta"><strong>Your Name</strong>, Alex Rivera, Priya Singh</p>
+              <p class="publication-card__venue">ICML 2026</p>
+              <div class="publication-actions">
+                <a class="publication-action" href="#" target="_blank" rel="noopener noreferrer">Paper / PDF</a>
+                <a class="publication-action" href="#" target="_blank" rel="noopener noreferrer">Code / GitHub</a>
+                <a class="publication-action" href="#" target="_blank" rel="noopener noreferrer">Project Page</a>
+              </div>
+            </article>
+
+            <article class="publication-card">
+              <h3 class="publication-card__title"><strong>Human-Centered Explanations for Real-Time Decision Support</strong></h3>
+              <p class="publication-card__meta">Lina Chen, <strong>Your Name</strong>, Mateo García</p>
+              <p class="publication-card__venue">CHI 2025</p>
+              <div class="publication-actions">
+                <a class="publication-action" href="#" target="_blank" rel="noopener noreferrer">Paper / PDF</a>
+                <a class="publication-action" href="#" target="_blank" rel="noopener noreferrer">Code / GitHub</a>
+                <a class="publication-action" href="#" target="_blank" rel="noopener noreferrer">Project Page</a>
+              </div>
+            </article>
+
+            <article class="publication-card">
+              <h3 class="publication-card__title"><strong>Bridging Social Science and Machine Learning for Fair Outcomes</strong></h3>
+              <p class="publication-card__meta"><strong>Your Name</strong>, Dana Schultz, Emre Yılmaz</p>
+              <p class="publication-card__venue">Nature Communications 2024</p>
+              <div class="publication-actions">
+                <a class="publication-action" href="#" target="_blank" rel="noopener noreferrer">Paper / PDF</a>
+                <a class="publication-action" href="#" target="_blank" rel="noopener noreferrer">Code / GitHub</a>
+                <a class="publication-action" href="#" target="_blank" rel="noopener noreferrer">Project Page</a>
+              </div>
+            </article>
+          </div>
+        </noscript>
+      </section>
+
+      <section id="teaching" aria-labelledby="teaching-heading">
+        <h2 class="section-heading" id="teaching-heading">Teaching</h2>
+
+        <h3 class="section-subheading" id="current-teaching-subheading">Current Teaching</h3>
+        <div class="teaching-list" aria-labelledby="current-teaching-subheading">
+          <article class="teaching-card">
+            <div class="teaching-card__header">
+              <h4 class="teaching-card__course">CS542: Trustworthy Machine Learning</h4>
+              <span class="teaching-card__meta">Lecturer · Spring 2026</span>
+            </div>
+            <p class="teaching-card__description">Graduate seminar examining robust, interpretable, and aligned ML systems through research papers and hands-on projects.</p>
+            <a class="teaching-card__link" href="#" target="_blank" rel="noopener noreferrer">Syllabus</a>
+          </article>
+
+          <article class="teaching-card">
+            <div class="teaching-card__header">
+              <h4 class="teaching-card__course">CS312: Data Ethics & Policy</h4>
+              <span class="teaching-card__meta">Co-Instructor · Spring 2026</span>
+            </div>
+            <p class="teaching-card__description">Interdisciplinary undergraduate course exploring the societal impacts of data science and AI policy frameworks.</p>
+            <a class="teaching-card__link" href="#" target="_blank" rel="noopener noreferrer">Course Materials</a>
+          </article>
+        </div>
+
+        <h3 class="section-subheading" id="past-teaching-subheading">Past Teaching</h3>
+        <div class="teaching-list" aria-labelledby="past-teaching-subheading">
+          <article class="teaching-card">
+            <div class="teaching-card__header">
+              <h4 class="teaching-card__course">CS101: Introduction to Artificial Intelligence</h4>
+              <span class="teaching-card__meta">Lecturer · Fall 2025</span>
+            </div>
+            <p class="teaching-card__description">Foundational overview of AI concepts and applications with weekly programming assignments in Python.</p>
+            <a class="teaching-card__link" href="#" target="_blank" rel="noopener noreferrer">Syllabus</a>
+          </article>
+
+          <article class="teaching-card">
+            <div class="teaching-card__header">
+              <h4 class="teaching-card__course">CS555: Explainable AI</h4>
+              <span class="teaching-card__meta">Teaching Assistant · Spring 2025</span>
+            </div>
+            <p class="teaching-card__description">Graduate-level course covering theory and practice of explainable models with lab sessions and project mentoring.</p>
+            <a class="teaching-card__link" href="#" target="_blank" rel="noopener noreferrer">Course Site</a>
+          </article>
+
+          <article class="teaching-card">
+            <div class="teaching-card__header">
+              <h4 class="teaching-card__course">CS204: Human-Computer Interaction</h4>
+              <span class="teaching-card__meta">Teaching Assistant · Fall 2024</span>
+            </div>
+            <p class="teaching-card__description">Studio-focused introduction to HCI principles with emphasis on prototyping, usability testing, and inclusive design.</p>
+            <a class="teaching-card__link" href="#" target="_blank" rel="noopener noreferrer">Course Materials</a>
+          </article>
+        </div>
+      </section>
+
+      <section id="blog" aria-labelledby="blog-heading">
+        <h2 class="section-heading" id="blog-heading">Latest Posts</h2>
+        <div class="blog-list">
+          <article class="blog-card">
+            <h3 class="blog-card__title"><a href="blog-depth-uncertainty-adaptation.html">Exploring Uncertainty and Adaptation in Depth Estimation</a></h3>
+            <p class="blog-card__meta">December 29, 2025</p>
+            <p class="blog-card__summary">A look at our latest work on gradient-based uncertainty estimation for monocular depth as well as a new consistency-regularised domain adaptation approach, and how they complement each other.</p>
+            <ul class="tag-list" aria-label="Tags for Exploring Uncertainty and Adaptation in Depth Estimation">
+              <li class="tag">#DepthEstimation</li>
+              <li class="tag">#ComputerVision</li>
+              <li class="tag">#ResearchUpdate</li>
+            </ul>
+          </article>
+
+          <article class="blog-card">
+            <h3 class="blog-card__title"><a href="blog-post-template.html">Designing Transparent ML Pipelines for Health Care</a></h3>
+            <p class="blog-card__meta">December 15, 2025</p>
+            <p class="blog-card__summary">I discuss lessons from deploying a clinical decision support prototype, covering collaboration with medical staff and balancing interpretability with performance.</p>
+            <ul class="tag-list" aria-label="Tags for Designing Transparent ML Pipelines for Health Care">
+              <li class="tag">#MachineLearning</li>
+              <li class="tag">#Healthcare</li>
+              <li class="tag">#ResponsibleAI</li>
+            </ul>
+          </article>
+
+          <article class="blog-card">
+            <h3 class="blog-card__title"><a href="blog-post-template.html">A Practical Guide to Model Interpretability Tooling</a></h3>
+            <p class="blog-card__meta">November 02, 2025</p>
+            <p class="blog-card__summary">A walkthrough of interpretability libraries I rely on, their trade-offs, and practical tips for integrating them into research and teaching workflows.</p>
+            <ul class="tag-list" aria-label="Tags for A Practical Guide to Model Interpretability Tooling">
+              <li class="tag">#Interpretability</li>
+              <li class="tag">#Tutorial</li>
+              <li class="tag">#Python</li>
+            </ul>
+          </article>
+
+          <article class="blog-card">
+            <h3 class="blog-card__title"><a href="blog-post-template.html">Reflections on ICML 2025: Trends in Trustworthy AI</a></h3>
+            <p class="blog-card__meta">July 28, 2025</p>
+            <p class="blog-card__summary">Conference highlights from ICML 2025 with an emphasis on reproducibility, safety, and community conversations shaping the next wave of trustworthy ML research.</p>
+            <ul class="tag-list" aria-label="Tags for Reflections on ICML 2025: Trends in Trustworthy AI">
+              <li class="tag">#Conference</li>
+              <li class="tag">#TrustworthyAI</li>
+              <li class="tag">#MachineLearning</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="site-footer__inner">
+      <p class="site-footer__meta">© <span id="current-year">2025</span> Your Name. All rights reserved.</p>
+      <div class="site-footer__social" aria-label="Social links">
+        <a class="site-footer__social-link" href="https://twitter.com/" target="_blank" rel="noopener noreferrer">Twitter · X</a>
+        <a class="site-footer__social-link" href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <a class="site-footer__social-link" href="https://github.com/" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <a class="site-footer__social-link" href="https://scholar.google.com/" target="_blank" rel="noopener noreferrer">Google Scholar</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="scripts/publications.js"></script>
+  <script>
+    (function () {
+      const navToggle = document.querySelector('.nav-toggle');
+      const nav = document.getElementById('primary-navigation');
+      const yearEl = document.getElementById('current-year');
+
+      if (yearEl) {
+        yearEl.textContent = new Date().getFullYear();
+      }
+
+      if (navToggle && nav) {
+        const navLinks = nav.querySelectorAll('.site-nav__link');
+
+        navToggle.addEventListener('click', function () {
+          const isOpen = nav.dataset.open === 'true';
+          const nextState = (!isOpen).toString();
+          nav.dataset.open = nextState;
+          navToggle.setAttribute('aria-expanded', nextState);
+        });
+
+        navLinks.forEach(function (link) {
+          link.addEventListener('click', function () {
+            nav.dataset.open = 'false';
+            navToggle.setAttribute('aria-expanded', 'false');
+
+            navLinks.forEach(function (item) {
+              item.classList.remove('site-nav__link--active');
+            });
+            link.classList.add('site-nav__link--active');
+          });
+        });
+      }
+    })();
+  </script>
+</body>
+</html>
+
+

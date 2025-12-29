@@ -1,0 +1,63 @@
+{
+  "source": "https://scholar.google.com/citations?hl=en&user=ADA3mb8AAAAJ&cstart=0&pagesize=100",
+  "generatedAt": "2025-12-29T17:19:18.835206+00:00",
+  "count": 4,
+  "publications": [
+    {
+      "title": "Revisiting Gradient-Based Uncertainty for Monocular Depth Estimation",
+      "authors": "J Hornauer, A El-Ghoussani, V Belagiannis",
+      "venue": "IEEE Transactions on Pattern Analysis and Machine Intelligence, 2025",
+      "year": 2025,
+      "link": "https://scholar.google.com",
+      "resources": [
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2502.05964"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2502.05964"
+        },
+        {
+          "label": "Code",
+          "url": "https://github.com/jhornauer/GrUMoDepth"
+        }
+      ]
+    },
+    {
+      "title": "Consistency Regularisation for Unsupervised Domain Adaptation in Monocular Depth Estimation",
+      "authors": "A El-Ghoussani, J Hornauer, G Carneiro, V Belagiannis",
+      "venue": "Proceedings of The 3rd Conference on Lifelong Learning Agents, PMLR 274:577-596, 2024",
+      "year": 2024,
+      "link": "https://scholar.google.com",
+      "resources": [
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2405.17704"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2405.17704"
+        },
+        {
+          "label": "Code",
+          "url": "https://github.com/AmirMaEl/SemiSupMDE"
+        }
+      ]
+    },
+    {
+      "title": "Gan-based augmentation of mammograms to improve breast lesion detection",
+      "authors": "A El-Ghoussani, D Rodríguez-Salas, M Seuret, A Maier",
+      "venue": "Bildverarbeitung für die Medizin 2022: Proceedings, German Workshop on …, 2022",
+      "year": 2022,
+      "link": "https://scholar.google.com"
+    },
+    {
+      "title": "The students will learn advanced deep learning topics, including recent network architectures, generative models, self-supervision, interpretability and explainability. In the …",
+      "authors": "V Belagiannis, M Hölle",
+      "venue": "Module description, 489, 0",
+      "year": null,
+      "link": "https://scholar.google.com"
+    }
+  ]
+}

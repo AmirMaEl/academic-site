@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Your Name · Blog</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="wrapper">
+    <header class="site-header" role="banner">
+      <div class="site-header__inner">
+        <a class="branding" href="index.html#home">Your Name</a>
+        <button class="nav-toggle" type="button" aria-label="Toggle navigation" aria-controls="primary-navigation" aria-expanded="false">
+          <span class="nav-toggle__line"></span>
+          <span class="nav-toggle__line"></span>
+          <span class="nav-toggle__line"></span>
+        </button>
+        <nav class="site-nav" id="primary-navigation" aria-label="Primary navigation" data-open="false">
+          <ul class="site-nav__list">
+            <li><a class="site-nav__link" href="index.html#home">Home</a></li>
+            <li><a class="site-nav__link" href="index.html#publications">Publications</a></li>
+            <li><a class="site-nav__link" href="index.html#teaching">Teaching</a></li>
+            <li><a class="site-nav__link site-nav__link--active" href="index.html#blog">Blog</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main role="main">
+      <section aria-labelledby="blog-heading">
+        <h1 class="section-heading" id="blog-heading">Latest Posts</h1>
+        <div class="blog-list">
+          <article class="blog-card">
+            <h2 class="blog-card__title"><a href="blog-post-template.html">Designing Transparent ML Pipelines for Health Care</a></h2>
+            <p class="blog-card__meta">December 15, 2025</p>
+            <p class="blog-card__summary">I discuss lessons from deploying a clinical decision support prototype, covering collaboration with medical staff and balancing interpretability with performance.</p>
+            <ul class="tag-list" aria-label="Tags for Designing Transparent ML Pipelines for Health Care">
+              <li class="tag">#MachineLearning</li>
+              <li class="tag">#Healthcare</li>
+              <li class="tag">#ResponsibleAI</li>
+            </ul>
+          </article>
+
+          <article class="blog-card">
+            <h2 class="blog-card__title"><a href="blog-post-template.html">A Practical Guide to Model Interpretability Tooling</a></h2>
+            <p class="blog-card__meta">November 02, 2025</p>
+            <p class="blog-card__summary">A walkthrough of interpretability libraries I rely on, their trade-offs, and practical tips for integrating them into research and teaching workflows.</p>
+            <ul class="tag-list" aria-label="Tags for A Practical Guide to Model Interpretability Tooling">
+              <li class="tag">#Interpretability</li>
+              <li class="tag">#Tutorial</li>
+              <li class="tag">#Python</li>
+            </ul>
+          </article>
+
+          <article class="blog-card">
+            <h2 class="blog-card__title"><a href="blog-post-template.html">Reflections on ICML 2025: Trends in Trustworthy AI</a></h2>
+            <p class="blog-card__meta">July 28, 2025</p>
+            <p class="blog-card__summary">Conference highlights from ICML 2025 with an emphasis on reproducibility, safety, and community conversations shaping the next wave of trustworthy ML research.</p>
+            <ul class="tag-list" aria-label="Tags for Reflections on ICML 2025: Trends in Trustworthy AI">
+              <li class="tag">#Conference</li>
+              <li class="tag">#TrustworthyAI</li>
+              <li class="tag">#MachineLearning</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="site-footer__inner">
+      <p class="site-footer__meta">© <span id="current-year">2025</span> Your Name. All rights reserved.</p>
+      <div class="site-footer__social" aria-label="Social links">
+        <a class="site-footer__social-link" href="https://twitter.com/" target="_blank" rel="noopener noreferrer">Twitter · X</a>
+        <a class="site-footer__social-link" href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <a class="site-footer__social-link" href="https://github.com/" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <a class="site-footer__social-link" href="https://scholar.google.com/" target="_blank" rel="noopener noreferrer">Google Scholar</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      const navToggle = document.querySelector('.nav-toggle');
+      const nav = document.getElementById('primary-navigation');
+      const yearEl = document.getElementById('current-year');
+
+      if (yearEl) {
+        yearEl.textContent = new Date().getFullYear();
+      }
+
+      if (navToggle && nav) {
+        const navLinks = nav.querySelectorAll('.site-nav__link');
+
+        navToggle.addEventListener('click', function () {
+          const isOpen = nav.dataset.open === 'true';
+          const nextState = (!isOpen).toString();
+          nav.dataset.open = nextState;
+          navToggle.setAttribute('aria-expanded', nextState);
+        });
+
+        navLinks.forEach(function (link) {
+          link.addEventListener('click', function () {
+            nav.dataset.open = 'false';
+            navToggle.setAttribute('aria-expanded', 'false');
+
+            navLinks.forEach(function (item) {
+              item.classList.remove('site-nav__link--active');
+            });
+            link.classList.add('site-nav__link--active');
+          });
+        });
+      }
+    })();
+  </script>
+</body>
+</html>
