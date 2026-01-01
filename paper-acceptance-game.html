@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Paper Acceptance Game</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    :root {
+      color-scheme: light dark;
+    }
+
+    body.game-page {
+      margin: 0;
+      font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: linear-gradient(160deg, rgba(18, 52, 138, 0.08), rgba(12, 30, 72, 0.45));
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .game-shell {
+      width: min(1080px, 92vw);
+      margin: 2.5rem auto 3.5rem;
+    }
+
+    .game-header {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .game-header__back {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      padding: 0.4rem 0.75rem;
+      border-radius: 999px;
+      background: rgba(17, 41, 94, 0.08);
+      color: inherit;
+      text-decoration: none;
+      font-weight: 600;
+      transition: background 0.2s ease, transform 0.2s ease;
+    }
+
+    .game-header__back:hover,
+    .game-header__back:focus-visible {
+      background: rgba(17, 41, 94, 0.18);
+      transform: translateX(-2px);
+      outline: none;
+    }
+
+    .game-header__title {
+      font-size: clamp(1.75rem, 3vw, 2.4rem);
+      font-weight: 700;
+      margin: 0;
+      color: #101d40;
+    }
+
+    .game-panel {
+      background: rgba(255, 255, 255, 0.92);
+      backdrop-filter: blur(9px);
+      border-radius: 1.5rem;
+      padding: clamp(1.5rem, 4vw, 2.5rem);
+      box-shadow: 0 24px 48px rgba(14, 33, 80, 0.18);
+    }
+
+    .game-panel__intro {
+      font-size: 1.05rem;
+      margin-top: 0;
+      margin-bottom: 1.5rem;
+      color: rgba(21, 37, 68, 0.8);
+      line-height: 1.6;
+    }
+
+    .game-form {
+      display: grid;
+      gap: 1.25rem;
+    }
+
+    .game-form__field {
+      display: grid;
+      gap: 0.4rem;
+    }
+
+    .game-form__field label {
+      font-weight: 600;
+      color: #102046;
+    }
+
+    .game-slider {
+      width: 100%;
+    }
+
+    .game-select,
+    .game-button,
+    .game-reset {
+      font: inherit;
+      border-radius: 0.9rem;
+      border: none;
+      padding: 0.7rem 1rem;
+    }
+
+    .game-select {
+      background: rgba(18, 52, 138, 0.08);
+      color: #102046;
+    }
+
+    .game-button {
+      background: #1a4ed8;
+      color: #ffffff;
+      font-weight: 700;
+      cursor: pointer;
+      transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+      box-shadow: 0 18px 30px rgba(18, 52, 138, 0.25);
+    }
+
+    .game-button:hover,
+    .game-button:focus-visible {
+      background: #163fc7;
+      transform: translateY(-1px);
+      box-shadow: 0 22px 40px rgba(12, 38, 114, 0.32);
+      outline: none;
+    }
+
+    .game-reset {
+      background: rgba(10, 18, 40, 0.08);
+      color: rgba(15, 32, 70, 0.85);
+      cursor: pointer;
+    }
+
+    .game-outcome {
+      margin: 1.5rem 0 0;
+      padding: 1rem 1.25rem;
+      border-radius: 1rem;
+      background: rgba(26, 78, 216, 0.08);
+      font-weight: 600;
+      color: #12224a;
+    }
+
+    .game-outcome[data-decision="Accept"] {
+      background: rgba(43, 168, 94, 0.12);
+      color: #135d36;
+    }
+
+    .game-outcome[data-decision="Reject"] {
+      background: rgba(203, 68, 68, 0.12);
+      color: #7a1f1f;
+    }
+
+    .game-history {
+      margin-top: 2.25rem;
+    }
+
+    .game-history__title {
+      font-size: 1.15rem;
+      margin-bottom: 0.75rem;
+      color: #14254d;
+    }
+
+    .game-history__list {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: grid;
+      gap: 0.75rem;
+    }
+
+    .game-history__item {
+      background: rgba(255, 255, 255, 0.78);
+      border-radius: 1rem;
+      padding: 0.85rem 1.1rem;
+      box-shadow: 0 10px 24px rgba(14, 33, 80, 0.12);
+      display: grid;
+      gap: 0.35rem;
+    }
+
+    .game-history__meta {
+      font-size: 0.9rem;
+      color: rgba(20, 36, 72, 0.72);
+    }
+
+    @media (max-width: 720px) {
+      .game-shell {
+        margin-top: 1.5rem;
+      }
+
+      .game-panel {
+        border-radius: 1.15rem;
+        padding: 1.4rem;
+      }
+
+      .game-header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .game-header__back {
+        order: 2;
+        padding-inline: 0.6rem;
+      }
+    }
+  </style>
+</head>
+<body class="game-page">
+  <div class="game-shell">
+    <header class="game-header">
+      <a class="game-header__back" href="index.html" aria-label="Back to homepage">&#8592; Back</a>
+      <h1 class="game-header__title">Paper Acceptance Game</h1>
+    </header>
+
+    <main class="game-panel" role="main">
+      <p class="game-panel__intro">Tune the strength of your submission, choose your venue, and press the program chair button to see whether your paper is accepted. Reviewer comments change every round, so play a few times to learn how the dynamics feel.</p>
+
+      <form class="game-form" id="game-form" aria-describedby="outcome">
+        <div class="game-form__field">
+          <label for="novelty">Novelty</label>
+          <input class="game-slider" id="novelty" name="novelty" type="range" min="1" max="5" step="1" value="3" aria-valuetext="Novelty score 3 of 5">
+        </div>
+        <div class="game-form__field">
+          <label for="methodology">Methodology</label>
+          <input class="game-slider" id="methodology" name="methodology" type="range" min="1" max="5" step="1" value="3" aria-valuetext="Methodology score 3 of 5">
+        </div>
+        <div class="game-form__field">
+          <label for="clarity">Clarity</label>
+          <input class="game-slider" id="clarity" name="clarity" type="range" min="1" max="5" step="1" value="3" aria-valuetext="Clarity score 3 of 5">
+        </div>
+        <div class="game-form__field">
+          <label for="venue">Target venue</label>
+          <select class="game-select" id="venue" name="venue">
+            <option value="workshop">Workshop track (threshold 3.0)</option>
+            <option value="main" selected>Main conference (threshold 3.6)</option>
+          </select>
+        </div>
+        <button class="game-button" type="submit">Ask the Program Chair</button>
+        <button class="game-reset" id="reset-game" type="button">Reset sliders</button>
+      </form>
+
+      <div class="game-outcome" id="outcome" data-decision="Pending">Submit to see what the reviewers decide.</div>
+
+      <section class="game-history" aria-live="polite">
+        <h2 class="game-history__title">Review log</h2>
+        <ul class="game-history__list" id="review-history"></ul>
+      </section>
+    </main>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      var form = document.getElementById('game-form');
+      var outcome = document.getElementById('outcome');
+      var historyList = document.getElementById('review-history');
+      var resetButton = document.getElementById('reset-game');
+      var round = 1;
+      var adjectives = ['thoughtful', 'bold', 'careful', 'intriguing', 'risky', 'solid'];
+      var concerns = ['limited experimentation', 'unclear motivation', 'missing ablation', 'ambiguous writing', 'unstated limitations', 'weak baseline'];
+      var praise = ['excellent intuition', 'strong empirical validation', 'clear exposition', 'timely problem choice', 'novel methodology', 'compelling results'];
+
+      form.addEventListener('submit', function (event) {
+        event.preventDefault();
+        var formData = new FormData(form);
+        var novelty = parseInt(formData.get('novelty'), 10);
+        var methodology = parseInt(formData.get('methodology'), 10);
+        var clarity = parseInt(formData.get('clarity'), 10);
+        var venue = formData.get('venue');
+
+        var baseScore = (novelty * 0.4) + (methodology * 0.35) + (clarity * 0.25);
+        var venuePressure = venue === 'main' ? 0.6 : 0.0;
+        var randomness = (Math.random() * 1.2) - 0.6;
+        var finalScore = Math.max(1, Math.min(5, baseScore - venuePressure + randomness));
+        var threshold = venue === 'main' ? 3.6 : 3.0;
+
+        var decision = 'Reject';
+        if (finalScore >= threshold + 0.2) {
+          decision = 'Accept';
+        } else if (finalScore >= threshold - 0.2) {
+          decision = 'Tiebreak';
+        }
+
+        outcome.textContent = 'Round ' + round + ': ' + decision + ' (score ' + finalScore.toFixed(2) + ')';
+        outcome.setAttribute('data-decision', decision);
+
+        var reviewerPraise = praise[Math.floor(Math.random() * praise.length)];
+        var reviewerConcern = concerns[Math.floor(Math.random() * concerns.length)];
+        var reviewerTone = adjectives[Math.floor(Math.random() * adjectives.length)];
+
+        var historyItem = document.createElement('li');
+        historyItem.className = 'game-history__item';
+
+        var headline = document.createElement('div');
+        headline.textContent = 'Round ' + round + ' · Decision: ' + decision;
+        historyItem.appendChild(headline);
+
+        var meta = document.createElement('div');
+        meta.className = 'game-history__meta';
+        meta.textContent = 'Reviewer summary: A ' + reviewerTone + ' paper with ' + reviewerPraise + ', but the program chair flagged ' + reviewerConcern + '.';
+        historyItem.appendChild(meta);
+
+        historyList.prepend(historyItem);
+        round += 1;
+      });
+
+      resetButton.addEventListener('click', function () {
+        var sliders = form.querySelectorAll('.game-slider');
+        sliders.forEach(function (slider) {
+          slider.value = 3;
+          slider.dispatchEvent(new Event('input'));
+        });
+        form.querySelector('#venue').value = 'main';
+        outcome.textContent = 'Submit to see what the reviewers decide.';
+        outcome.setAttribute('data-decision', 'Pending');
+      });
+    });
+  </script>
+</body>
+</html>

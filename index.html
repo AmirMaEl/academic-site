@@ -5,6 +5,34 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Amir El-Ghoussani · Academic Homepage</title>
   <link rel="stylesheet" href="style.css">
+  <style>
+    .project-card__link--button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.6rem 1.2rem;
+      border-radius: 0.75rem;
+      background: var(--accent-500, #1a4ed8);
+      color: var(--surface-inverse, #ffffff);
+      font-weight: 600;
+      text-decoration: none;
+      box-shadow: var(--shadow-sm, 0 10px 22px rgba(16, 32, 81, 0.18));
+      gap: 0.4rem;
+      transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+    }
+
+    .project-card__link--button:hover,
+    .project-card__link--button:focus-visible {
+      background: var(--accent-600, #163fc7);
+      box-shadow: var(--shadow-md, 0 14px 26px rgba(12, 24, 64, 0.24));
+      transform: translateY(-1px);
+    }
+
+    .project-card__link--button:focus-visible {
+      outline: 3px solid var(--focus-ring, rgba(26, 78, 216, 0.35));
+      outline-offset: 2px;
+    }
+  </style>
 </head>
 <body>
   <header class="site-header" role="banner">
@@ -13,6 +41,7 @@
         <a class="site-header__link" href="#about">About</a>
         <a class="site-header__link" href="#news">News</a>
         <a class="site-header__link" href="#publications">Publications</a>
+        <a class="site-header__link" href="#projects">Projects</a>
         <a class="site-header__link" href="#teaching">Teaching</a>
         <a class="site-header__link" href="#contact">Contact</a>
       </nav>
@@ -73,6 +102,27 @@
       
       </section>
 
+      <section id="projects" class="section" aria-labelledby="projects-heading">
+        <div class="section__header">
+          <h2 class="section__title" id="projects-heading">Projects</h2>
+          <a class="section__link" href="#home">Back to top</a>
+        </div>
+        <div class="projects-grid" data-projects-grid>
+          <article class="project-card" data-project-year="2025" data-project-order="paper-acceptance-game">
+            <div class="project-card__meta">
+              <span class="project-card__tag">Playful Research</span>
+              <span class="project-card__year">2025</span>
+            </div>
+            <h3 class="project-card__title">Paper Acceptance Game</h3>
+            <p class="project-card__summary">A lightweight web experience that gamifies conference reviews—players submit mock manuscripts, reconcile reviewer feedback, and navigate accept or reject outcomes to understand peer-review dynamics.</p>
+            <div class="project-card__links">
+              <a class="project-card__link project-card__link--button" href="paper-acceptance-game.html" aria-label="Play the Paper Acceptance Game">Play the game</a>
+              <a class="project-card__link" href="#" aria-label="Paper Acceptance Game prototype">Prototype</a>
+              <a class="project-card__link" href="#" aria-label="Paper Acceptance Game design notes">Design notes</a>
+            </div>
+          </article>
+        </div>
+      </section>
 
       <section id="news" class="section" aria-labelledby="news-heading">
         <div class="section__header">
@@ -287,6 +337,24 @@
       var yearEl = document.getElementById('current-year');
       if (yearEl) {
         yearEl.textContent = new Date().getFullYear();
+      }
+
+      var projectsGrid = document.querySelector('[data-projects-grid]');
+      if (projectsGrid) {
+        var projectCards = Array.prototype.slice.call(projectsGrid.querySelectorAll('[data-project-year]'));
+        projectCards.sort(function (a, b) {
+          var yearA = parseInt(a.getAttribute('data-project-year'), 10) || 0;
+          var yearB = parseInt(b.getAttribute('data-project-year'), 10) || 0;
+          if (yearA === yearB) {
+            var orderA = (a.getAttribute('data-project-order') || '').toLowerCase();
+            var orderB = (b.getAttribute('data-project-order') || '').toLowerCase();
+            return orderA.localeCompare(orderB);
+          }
+          return yearB - yearA;
+        });
+        for (var k = 0; k < projectCards.length; k++) {
+          projectsGrid.appendChild(projectCards[k]);
+        }
       }
 
       var namePattern = /(Amir El-Ghoussani|A\.?\s?El-Ghoussani)/g;
