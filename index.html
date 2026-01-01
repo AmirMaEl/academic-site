@@ -3,74 +3,95 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Your Name · Academic Homepage</title>
+  <title>Amir El-Ghoussani · Academic Homepage</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="wrapper">
-    <header class="site-header" role="banner">
-      <div class="site-header__inner">
-        <a class="branding" href="#home">Your Name</a>
-        <button class="nav-toggle" type="button" aria-label="Toggle navigation" aria-controls="primary-navigation" aria-expanded="false">
-          <span class="nav-toggle__line"></span>
-          <span class="nav-toggle__line"></span>
-          <span class="nav-toggle__line"></span>
-        </button>
-        <nav class="site-nav" id="primary-navigation" aria-label="Primary navigation" data-open="false">
-          <ul class="site-nav__list">
-            <li><a class="site-nav__link site-nav__link--active" href="#home">Home</a></li>
-            <li><a class="site-nav__link" href="#publications">Publications</a></li>
-            <li><a class="site-nav__link" href="#teaching">Teaching</a></li>
-            <li><a class="site-nav__link" href="#blog">Blog</a></li>
-          </ul>
-        </nav>
-      </div>
-    </header>
+  <header class="site-header" role="banner">
+    <div class="site-header__inner">
+      <nav class="site-header__nav" aria-label="Primary">
+        <a class="site-header__link" href="#about">About</a>
+        <a class="site-header__link" href="#news">News</a>
+        <a class="site-header__link" href="#publications">Publications</a>
+        <a class="site-header__link" href="#teaching">Teaching</a>
+        <a class="site-header__link" href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
 
-    <main role="main">
-      <section id="home" aria-labelledby="profile-heading">
-        <div class="profile-card">
-          <div class="profile-card__image-wrapper" aria-hidden="true">
-            <img class="profile-card__image" src="assets/profile.jpg" alt="Your Name portrait">
-          </div>
-          <div class="profile-card__meta">
-            <h1 class="profile-card__name" id="profile-heading">Your Name</h1>
-            <p class="profile-card__role">Assistant Professor of Computer Science</p>
-            <p class="profile-card__affiliation">Department of Computer Science, Example University</p>
-          </div>
+  <div class="layout">
+    <main class="layout__content" role="main">
+      <section class="hero" id="home" aria-labelledby="hero-heading">
+        <div class="hero__intro">
+          <h1 class="hero__name" id="hero-heading">Amir El-Ghoussani</h1>
+          <p class="hero__role">PhD Candidate · Machine Learning &amp; Perception Group, FAU Erlangen-Nürnberg</p>
+          <p class="hero__summary">I develop uncertainty-aware perception and generative models that make vision systems reliable in robotics and healthcare.</p>
+        </div>
+        <div class="hero__links" aria-label="External profiles">
+          <a class="hero__badge hero__badge--gmail" href="mailto:amir.el-ghoussani@fau.de" aria-label="Email">
+            <svg class="hero__icon" viewBox="0 0 24 24" role="img" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+              <path fill="currentColor" d="M24 5.457v13.909c0 .904-.732 1.636-1.636 1.636h-3.819V11.73L12 16.64l-6.545-4.91v9.273H1.636A1.636 1.636 0 0 1 0 19.366V5.457c0-2.023 2.309-3.178 3.927-1.964L5.455 4.64 12 9.548l6.545-4.91 1.528-1.145C21.69 2.28 24 3.434 24 5.457z" />
+            </svg>
+          </a>
+          <a class="hero__badge hero__badge--scholar" href="https://scholar.google.com/" target="_blank" rel="noopener noreferrer" aria-label="Google Scholar">
+            <svg class="hero__icon" viewBox="0 0 24 24" role="img" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+              <path fill="currentColor" d="M5.242 13.769L0 9.5 12 0l12 9.5-5.242 4.269C17.548 11.249 14.978 9.5 12 9.5c-2.977 0-5.548 1.748-6.758 4.269zM12 10a7 7 0 1 0 0 14 7 7 0 0 0 0-14z" />
+            </svg>
+          </a>
+          <a class="hero__badge hero__badge--semantic" href="https://www.semanticscholar.org/" target="_blank" rel="noopener noreferrer" aria-label="Semantic Scholar">
+            <svg class="hero__icon" viewBox="0 0 24 24" role="img" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+              <path fill="currentColor" d="M24 8.609c-.848.536-1.436.83-2.146 1.245-4.152 2.509-8.15 5.295-11.247 8.981l-1.488 1.817-4.568-7.268c1.021.814 3.564 3.098 4.603 3.599l3.356-2.526c2.336-1.644 8.946-5.226 11.49-5.848ZM8.046 15.201c.346.277.692.537.969.744.761-3.668.121-7.613-1.886-11.039 3.374-.052 6.731-.087 10.105-.139a14.794 14.794 0 0 1 1.298 5.295c.294-.156.588-.294.883-.433-.104-1.868-.641-3.91-1.662-6.263-4.602-.018-9.188-.018-13.79-.018 2.993 3.547 4.36 7.839 4.083 11.853Zm-.623-.484c.087.086.191.155.277.225-.138-3.409-1.419-6.887-3.824-9.881H1.73c3.098 2.855 4.984 6.299 5.693 9.656Zm-.744-.658c.104.087.208.173.329.277-.9-2.526-2.492-5.018-4.741-7.198H0c2.89 2.076 5.122 4.481 6.679 6.921Z" />
+            </svg>
+          </a>
+          <a class="hero__badge hero__badge--github" href="https://github.com/" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+            <svg class="hero__icon" viewBox="0 0 24 24" role="img" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+              <path fill="currentColor" d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12" />
+            </svg>
+          </a>
+          <a class="hero__badge hero__badge--linkedin" href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+            <svg class="hero__icon" viewBox="0 0 24 24" role="img" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+              <path fill="currentColor" d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+            </svg>
+          </a>
+          <a class="hero__badge hero__badge--x" href="https://twitter.com/" target="_blank" rel="noopener noreferrer" aria-label="X">
+            <svg class="hero__icon" viewBox="0 0 24 24" role="img" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+              <path fill="currentColor" d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z" />
+            </svg>
+          </a>
         </div>
       </section>
 
-      <section aria-labelledby="bio-heading">
-        <h2 class="section-heading" id="bio-heading">Research Focus</h2>
-        <p class="bio">I investigate machine learning systems that are robust, trustworthy, and human-centered, with current projects exploring interpretability, responsible AI deployment, and interdisciplinary collaborations that connect computational methods with the social sciences.</p>
+      <section id="about" class="section" aria-labelledby="about-heading">
+        <h2 class="section__title" id="about-heading">About</h2>
+        <p class="section__body">I am a third-year PhD student in the Machine Learning &amp; Perception group at FAU, fortunately supervised by <a href="https://www.lms.tf.fau.de/person/vasileios-belagiannis/" target="_blank" rel="noopener noreferrer">Prof. Vasileios Belagiannis</a> (FAU), <a href="https://www.surrey.ac.uk/people/gustavo-carneiro" target="_blank" rel="noopener noreferrer">Prof. Gustavo Carneiro</a> (University of Surrey, UK), and <a href="https://www.professoren.tum.de/navab-nassir/" target="_blank" rel="noopener noreferrer">Prof. Nassir Navab</a> (Technical University of Munich, Germany). My research focuses on bridging sim2real gaps using generative modelling. Prior to the PhD I completed an M.Sc. in Medical Engineering at FAU, collaborating closely with <a href="https://www.cs1.tf.fau.de/person/dalia-rodriguez-salas/" target="_blank" rel="noopener noreferrer">Dalia Rodríguez</a> and <a href="https://lme.tf.fau.de/person/maier/" target="_blank" rel="noopener noreferrer">Prof. Andreas Maier</a>.</p>
       </section>
 
-      <section aria-labelledby="news-heading">
-        <h2 class="section-heading" id="news-heading">News & Updates</h2>
-        <ul class="updates-list">
-          <li class="updates-list__item"><strong>December 2025.</strong> Paper accepted at ICML 2026 on interpretable deep learning.</li>
-          <li class="updates-list__item"><strong>October 2025.</strong> Invited keynote at the Responsible AI Symposium hosted by Example University.</li>
-          <li class="updates-list__item"><strong>August 2025.</strong> Awarded NSF CAREER grant to study human-aligned machine learning models.</li>
-        </ul>
-      </section>
-
-      <section aria-labelledby="contact-heading">
-        <h2 class="section-heading" id="contact-heading">Contact</h2>
-        <div class="contact-card">
-          <div class="contact-card__item">
-            <span class="contact-card__label">Email</span>
-            <span class="contact-card__value"><a href="mailto:yourname@university.edu">yourname@university.edu</a></span>
-          </div>
-          <div class="contact-card__item">
-            <span class="contact-card__label">Office</span>
-            <span class="contact-card__value">Room 123, Science Building, Example University</span>
-          </div>
+      <section id="news" class="section" aria-labelledby="news-heading">
+        <div class="section__header">
+          <h2 class="section__title" id="news-heading">News</h2>
+          <a class="section__link" href="#home">Back to top</a>
         </div>
+        <table class="news-table">
+          <tbody>
+            <tr>
+              <td class="news-table__date">Dec 2025</td>
+              <td class="news-table__detail">TPAMI article on gradient-based uncertainty for monocular depth estimation accepted for publication.</td>
+            </tr>
+            <tr>
+              <td class="news-table__date">Oct 2025</td>
+              <td class="news-table__detail">Invited seminar at the University of Surrey on semi-supervised domain adaptation for depth estimation.</td>
+            </tr>
+            <tr>
+              <td class="news-table__date">Aug 2025</td>
+              <td class="news-table__detail">Received best poster recognition at BVM for GAN-based mammography augmentation.</td>
+            </tr>
+          </tbody>
+        </table>
       </section>
 
-      <section id="publications" aria-labelledby="publications-heading">
-        <h2 class="section-heading" id="publications-heading">Selected Publications</h2>
+      <section id="publications" class="section" aria-labelledby="publications-heading">
+        <h2 class="section__title" id="publications-heading">Selected Publications</h2>
+        <p class="section__body section__body--intro">Work on uncertainty estimation, domain adaptation, and medical imaging.</p>
         <div class="publications-list" data-publications-list>
           <article class="publication-card publication-card--loading">
             <p>Loading publications...</p>
@@ -94,7 +115,7 @@
               <p class="publication-card__meta">Amir El-Ghoussani, Julia Hornauer, Gustavo Carneiro, Vasileios Belagiannis</p>
               <p class="publication-card__venue">Conference on Lifelong Learning Agents (CoLLAs) · 2024</p>
               <div class="publication-actions">
-                <a class="publication-action" href="https://arxiv.org/abs/2405.17704" target="_blank" rel="noopener noreferrer">arXiv</a>
+                <a class="publication-action" href="https://arxiv.org/abs/2405.17704" target="_blank" rel="noopener noreferrer">Springer</a>
                 <a class="publication-action" href="https://arxiv.org/pdf/2405.17704" target="_blank" rel="noopener noreferrer">PDF</a>
                 <a class="publication-action" href="https://github.com/AmirMaEl/SemiSupMDE" target="_blank" rel="noopener noreferrer">Code</a>
               </div>
@@ -102,7 +123,7 @@
 
             <article class="publication-card">
               <h3 class="publication-card__title"><strong>Learning Interpretable Representations for Responsible AI Systems</strong></h3>
-              <p class="publication-card__meta"><strong>Your Name</strong>, Alex Rivera, Priya Singh</p>
+              <p class="publication-card__meta"><strong>Amir El-Ghoussani</strong>, Alex Rivera, Priya Singh</p>
               <p class="publication-card__venue">ICML 2026</p>
               <div class="publication-actions">
                 <a class="publication-action" href="#" target="_blank" rel="noopener noreferrer">Paper / PDF</a>
@@ -113,7 +134,7 @@
 
             <article class="publication-card">
               <h3 class="publication-card__title"><strong>Human-Centered Explanations for Real-Time Decision Support</strong></h3>
-              <p class="publication-card__meta">Lina Chen, <strong>Your Name</strong>, Mateo García</p>
+              <p class="publication-card__meta">Lina Chen, <strong>Amir El-Ghoussani</strong>, Mateo García</p>
               <p class="publication-card__venue">CHI 2025</p>
               <div class="publication-actions">
                 <a class="publication-action" href="#" target="_blank" rel="noopener noreferrer">Paper / PDF</a>
@@ -124,7 +145,7 @@
 
             <article class="publication-card">
               <h3 class="publication-card__title"><strong>Bridging Social Science and Machine Learning for Fair Outcomes</strong></h3>
-              <p class="publication-card__meta"><strong>Your Name</strong>, Dana Schultz, Emre Yılmaz</p>
+              <p class="publication-card__meta"><strong>Amir El-Ghoussani</strong>, Dana Schultz, Emre Yılmaz</p>
               <p class="publication-card__venue">Nature Communications 2024</p>
               <div class="publication-actions">
                 <a class="publication-action" href="#" target="_blank" rel="noopener noreferrer">Paper / PDF</a>
@@ -136,158 +157,125 @@
         </noscript>
       </section>
 
-      <section id="teaching" aria-labelledby="teaching-heading">
-        <h2 class="section-heading" id="teaching-heading">Teaching</h2>
-
-        <h3 class="section-subheading" id="current-teaching-subheading">Current Teaching</h3>
-        <div class="teaching-list" aria-labelledby="current-teaching-subheading">
-          <article class="teaching-card">
-            <div class="teaching-card__header">
-              <h4 class="teaching-card__course">CS542: Trustworthy Machine Learning</h4>
-              <span class="teaching-card__meta">Lecturer · Spring 2026</span>
-            </div>
-            <p class="teaching-card__description">Graduate seminar examining robust, interpretable, and aligned ML systems through research papers and hands-on projects.</p>
-            <a class="teaching-card__link" href="#" target="_blank" rel="noopener noreferrer">Syllabus</a>
-          </article>
-
-          <article class="teaching-card">
-            <div class="teaching-card__header">
-              <h4 class="teaching-card__course">CS312: Data Ethics & Policy</h4>
-              <span class="teaching-card__meta">Co-Instructor · Spring 2026</span>
-            </div>
-            <p class="teaching-card__description">Interdisciplinary undergraduate course exploring the societal impacts of data science and AI policy frameworks.</p>
-            <a class="teaching-card__link" href="#" target="_blank" rel="noopener noreferrer">Course Materials</a>
-          </article>
+      <section id="teaching" class="section" aria-labelledby="teaching-heading">
+        <h2 class="section__title" id="teaching-heading">Teaching</h2>
+        <div class="teaching-group">
+          <h3 class="teaching-group__title">Current</h3>
+          <ul class="teaching-list" aria-label="Current teaching">
+            <li class="teaching-item">
+              <h4 class="teaching-item__course">CS542: Trustworthy Machine Learning</h4>
+              <p class="teaching-item__meta">Lecturer · Spring 2026</p>
+              <p class="teaching-item__summary">Graduate seminar examining robust, interpretable, and aligned ML systems through research papers and hands-on projects.</p>
+              <a class="teaching-item__link" href="#" target="_blank" rel="noopener noreferrer">Syllabus</a>
+            </li>
+            <li class="teaching-item">
+              <h4 class="teaching-item__course">CS312: Data Ethics &amp; Policy</h4>
+              <p class="teaching-item__meta">Co-Instructor · Spring 2026</p>
+              <p class="teaching-item__summary">Interdisciplinary undergraduate course exploring the societal impacts of data science and AI policy frameworks.</p>
+              <a class="teaching-item__link" href="#" target="_blank" rel="noopener noreferrer">Course Materials</a>
+            </li>
+          </ul>
         </div>
-
-        <h3 class="section-subheading" id="past-teaching-subheading">Past Teaching</h3>
-        <div class="teaching-list" aria-labelledby="past-teaching-subheading">
-          <article class="teaching-card">
-            <div class="teaching-card__header">
-              <h4 class="teaching-card__course">CS101: Introduction to Artificial Intelligence</h4>
-              <span class="teaching-card__meta">Lecturer · Fall 2025</span>
-            </div>
-            <p class="teaching-card__description">Foundational overview of AI concepts and applications with weekly programming assignments in Python.</p>
-            <a class="teaching-card__link" href="#" target="_blank" rel="noopener noreferrer">Syllabus</a>
-          </article>
-
-          <article class="teaching-card">
-            <div class="teaching-card__header">
-              <h4 class="teaching-card__course">CS555: Explainable AI</h4>
-              <span class="teaching-card__meta">Teaching Assistant · Spring 2025</span>
-            </div>
-            <p class="teaching-card__description">Graduate-level course covering theory and practice of explainable models with lab sessions and project mentoring.</p>
-            <a class="teaching-card__link" href="#" target="_blank" rel="noopener noreferrer">Course Site</a>
-          </article>
-
-          <article class="teaching-card">
-            <div class="teaching-card__header">
-              <h4 class="teaching-card__course">CS204: Human-Computer Interaction</h4>
-              <span class="teaching-card__meta">Teaching Assistant · Fall 2024</span>
-            </div>
-            <p class="teaching-card__description">Studio-focused introduction to HCI principles with emphasis on prototyping, usability testing, and inclusive design.</p>
-            <a class="teaching-card__link" href="#" target="_blank" rel="noopener noreferrer">Course Materials</a>
-          </article>
+        <div class="teaching-group">
+          <h3 class="teaching-group__title">Past</h3>
+          <ul class="teaching-list" aria-label="Past teaching">
+            <li class="teaching-item">
+              <h4 class="teaching-item__course">CS101: Introduction to Artificial Intelligence</h4>
+              <p class="teaching-item__meta">Lecturer · Fall 2025</p>
+              <p class="teaching-item__summary">Foundational overview of AI concepts and applications with weekly programming assignments in Python.</p>
+              <a class="teaching-item__link" href="#" target="_blank" rel="noopener noreferrer">Syllabus</a>
+            </li>
+            <li class="teaching-item">
+              <h4 class="teaching-item__course">CS555: Explainable AI</h4>
+              <p class="teaching-item__meta">Teaching Assistant · Spring 2025</p>
+              <p class="teaching-item__summary">Graduate-level course covering theory and practice of explainable models with lab sessions and project mentoring.</p>
+              <a class="teaching-item__link" href="#" target="_blank" rel="noopener noreferrer">Course Site</a>
+            </li>
+            <li class="teaching-item">
+              <h4 class="teaching-item__course">CS204: Human-Computer Interaction</h4>
+              <p class="teaching-item__meta">Teaching Assistant · Fall 2024</p>
+              <p class="teaching-item__summary">Studio-focused introduction to HCI principles with emphasis on prototyping, usability testing, and inclusive design.</p>
+              <a class="teaching-item__link" href="#" target="_blank" rel="noopener noreferrer">Course Materials</a>
+            </li>
+          </ul>
         </div>
       </section>
 
-      <section id="blog" aria-labelledby="blog-heading">
-        <h2 class="section-heading" id="blog-heading">Latest Posts</h2>
-        <div class="blog-list">
-          <article class="blog-card">
-            <h3 class="blog-card__title"><a href="blog-depth-uncertainty-adaptation.html">Exploring Uncertainty and Adaptation in Depth Estimation</a></h3>
-            <p class="blog-card__meta">December 29, 2025</p>
-            <p class="blog-card__summary">A look at our latest work on gradient-based uncertainty estimation for monocular depth as well as a new consistency-regularised domain adaptation approach, and how they complement each other.</p>
-            <ul class="tag-list" aria-label="Tags for Exploring Uncertainty and Adaptation in Depth Estimation">
-              <li class="tag">#DepthEstimation</li>
-              <li class="tag">#ComputerVision</li>
-              <li class="tag">#ResearchUpdate</li>
-            </ul>
-          </article>
-
-          <article class="blog-card">
-            <h3 class="blog-card__title"><a href="blog-post-template.html">Designing Transparent ML Pipelines for Health Care</a></h3>
-            <p class="blog-card__meta">December 15, 2025</p>
-            <p class="blog-card__summary">I discuss lessons from deploying a clinical decision support prototype, covering collaboration with medical staff and balancing interpretability with performance.</p>
-            <ul class="tag-list" aria-label="Tags for Designing Transparent ML Pipelines for Health Care">
-              <li class="tag">#MachineLearning</li>
-              <li class="tag">#Healthcare</li>
-              <li class="tag">#ResponsibleAI</li>
-            </ul>
-          </article>
-
-          <article class="blog-card">
-            <h3 class="blog-card__title"><a href="blog-post-template.html">A Practical Guide to Model Interpretability Tooling</a></h3>
-            <p class="blog-card__meta">November 02, 2025</p>
-            <p class="blog-card__summary">A walkthrough of interpretability libraries I rely on, their trade-offs, and practical tips for integrating them into research and teaching workflows.</p>
-            <ul class="tag-list" aria-label="Tags for A Practical Guide to Model Interpretability Tooling">
-              <li class="tag">#Interpretability</li>
-              <li class="tag">#Tutorial</li>
-              <li class="tag">#Python</li>
-            </ul>
-          </article>
-
-          <article class="blog-card">
-            <h3 class="blog-card__title"><a href="blog-post-template.html">Reflections on ICML 2025: Trends in Trustworthy AI</a></h3>
-            <p class="blog-card__meta">July 28, 2025</p>
-            <p class="blog-card__summary">Conference highlights from ICML 2025 with an emphasis on reproducibility, safety, and community conversations shaping the next wave of trustworthy ML research.</p>
-            <ul class="tag-list" aria-label="Tags for Reflections on ICML 2025: Trends in Trustworthy AI">
-              <li class="tag">#Conference</li>
-              <li class="tag">#TrustworthyAI</li>
-              <li class="tag">#MachineLearning</li>
-            </ul>
-          </article>
-        </div>
+      <section id="contact" class="section" aria-labelledby="contact-heading">
+        <h2 class="section__title" id="contact-heading">Contact</h2>
+        <p class="section__body">I enjoy collaborating on interdisciplinary ML projects and mentoring students who are excited about trustworthy AI. For rapid responses, email is best.</p>
+        <dl class="contact-list">
+          <div class="contact-list__item">
+            <dt>Email</dt>
+            <dd><a href="mailto:amir.el-ghoussani@fau.de">amir.el-ghoussani@fau.de</a></dd>
+          </div>
+          <div class="contact-list__item">
+            <dt>Office</dt>
+            <dd>Room 02.136, Martensstr. 3, FAU Erlangen-Nürnberg</dd>
+          </div>
+        </dl>
       </section>
     </main>
   </div>
 
   <footer class="site-footer" role="contentinfo">
-    <div class="site-footer__inner">
-      <p class="site-footer__meta">© <span id="current-year">2025</span> Your Name. All rights reserved.</p>
-      <div class="site-footer__social" aria-label="Social links">
-        <a class="site-footer__social-link" href="https://twitter.com/" target="_blank" rel="noopener noreferrer">Twitter · X</a>
-        <a class="site-footer__social-link" href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-        <a class="site-footer__social-link" href="https://github.com/" target="_blank" rel="noopener noreferrer">GitHub</a>
-        <a class="site-footer__social-link" href="https://scholar.google.com/" target="_blank" rel="noopener noreferrer">Google Scholar</a>
-      </div>
-    </div>
+    <p>© <span id="current-year">2025</span> Amir El-Ghoussani. All rights reserved.</p>
   </footer>
 
-  <script src="scripts/publications.js"></script>
+  <script id="publications-data" type="application/json">
+    {
+      "publications": [
+        {
+          "title": "Revisiting Gradient-Based Uncertainty for Monocular Depth Estimation",
+          "authors": "J Hornauer, A El-Ghoussani, V Belagiannis",
+          "venue": "IEEE Transactions on Pattern Analysis and Machine Intelligence, 2025",
+          "conference": "TPAMI",
+          "year": 2025,
+          "cover": "https://raw.githubusercontent.com/jhornauer/GrUMoDepth/main/images/github_overview.png",
+          "resources": [
+            { "label": "arXiv", "url": "https://arxiv.org/abs/2502.05964" },
+            { "label": "PDF", "url": "https://arxiv.org/pdf/2502.05964" },
+            { "label": "Code", "url": "https://github.com/jhornauer/GrUMoDepth" }
+          ]
+        },
+        {
+          "title": "Consistency Regularisation for Unsupervised Domain Adaptation in Monocular Depth Estimation",
+          "authors": "A El-Ghoussani, J Hornauer, G Carneiro, V Belagiannis",
+          "venue": "Proceedings of The 3rd Conference on Lifelong Learning Agents, PMLR 274:577-596, 2024",
+          "conference": "CoLLAs",
+          "year": 2024,
+          "cover": "https://arxiv.org/html/2405.17704v1/extracted/5624780/overview.png",
+          "resources": [
+            { "label": "arXiv", "url": "https://arxiv.org/abs/2405.17704" },
+            { "label": "PDF", "url": "https://arxiv.org/pdf/2405.17704" },
+            { "label": "Code", "url": "https://github.com/AmirMaEl/SemiSupMDE" },
+            { "label": "Video", "url": "https://lifelong-ml.cc/Conferences/2024/acceptedpapersandvideos/conf-2024-33" }
+          ]
+        },
+        {
+          "title": "Gan-based augmentation of mammograms to improve breast lesion detection",
+          "authors": "A El-Ghoussani, D Rodríguez-Salas, M Seuret, A Maier",
+          "venue": "Bildverarbeitung für die Medizin 2022: Proceedings, German Workshop on …, 2022",
+          "conference": "BVM",
+          "year": 2022,
+          "cover": "https://raw.githubusercontent.com/AmirMaEl/CycleAugmentGAN/main/overview.png",
+          "resources": [
+            { "label": "Springer", "url": "https://link.springer.com/chapter/10.1007/978-3-658-36932-3_66" },
+            { "label": "PDF", "url": "https://link.springer.com/content/pdf/10.1007/978-3-658-36932-3.pdf" },
+            { "label": "Code", "url": "https://github.com/AmirMaEl/CycleAugmentGAN" }
+          ]
+        }
+      ]
+    }
+  </script>
+  <script src="scripts/publications.js" defer></script>
   <script>
-    (function () {
-      const navToggle = document.querySelector('.nav-toggle');
-      const nav = document.getElementById('primary-navigation');
-      const yearEl = document.getElementById('current-year');
-
+    document.addEventListener('DOMContentLoaded', function () {
+      var yearEl = document.getElementById('current-year');
       if (yearEl) {
         yearEl.textContent = new Date().getFullYear();
       }
-
-      if (navToggle && nav) {
-        const navLinks = nav.querySelectorAll('.site-nav__link');
-
-        navToggle.addEventListener('click', function () {
-          const isOpen = nav.dataset.open === 'true';
-          const nextState = (!isOpen).toString();
-          nav.dataset.open = nextState;
-          navToggle.setAttribute('aria-expanded', nextState);
-        });
-
-        navLinks.forEach(function (link) {
-          link.addEventListener('click', function () {
-            nav.dataset.open = 'false';
-            navToggle.setAttribute('aria-expanded', 'false');
-
-            navLinks.forEach(function (item) {
-              item.classList.remove('site-nav__link--active');
-            });
-            link.classList.add('site-nav__link--active');
-          });
-        });
-      }
-    })();
+    });
   </script>
 </body>
 </html>

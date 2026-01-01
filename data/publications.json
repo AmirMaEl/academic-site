@@ -1,13 +1,15 @@
 {
   "source": "https://scholar.google.com/citations?hl=en&user=ADA3mb8AAAAJ&cstart=0&pagesize=100",
-  "generatedAt": "2025-12-29T17:19:18.835206+00:00",
-  "count": 4,
+  "generatedAt": "2025-12-30T03:02:40.809511+00:00",
+  "count": 3,
   "publications": [
     {
       "title": "Revisiting Gradient-Based Uncertainty for Monocular Depth Estimation",
       "authors": "J Hornauer, A El-Ghoussani, V Belagiannis",
       "venue": "IEEE Transactions on Pattern Analysis and Machine Intelligence, 2025",
+      "conference": "TPAMI",
       "year": 2025,
+      "cover": "https://raw.githubusercontent.com/jhornauer/GrUMoDepth/main/images/github_overview.png",
       "link": "https://scholar.google.com",
       "resources": [
         {
@@ -28,7 +30,9 @@
       "title": "Consistency Regularisation for Unsupervised Domain Adaptation in Monocular Depth Estimation",
       "authors": "A El-Ghoussani, J Hornauer, G Carneiro, V Belagiannis",
       "venue": "Proceedings of The 3rd Conference on Lifelong Learning Agents, PMLR 274:577-596, 2024",
+      "conference": "CoLLAs",
       "year": 2024,
+      "cover": "https://arxiv.org/html/2405.17704v1/extracted/5624780/overview.png",
       "link": "https://scholar.google.com",
       "resources": [
         {
@@ -47,16 +51,11 @@
     },
     {
       "title": "Gan-based augmentation of mammograms to improve breast lesion detection",
-      "authors": "A El-Ghoussani, D Rodríguez-Salas, M Seuret, A Maier",
-      "venue": "Bildverarbeitung für die Medizin 2022: Proceedings, German Workshop on …, 2022",
+      "authors": "A El-Ghoussani, D RodrÃ­guez-Salas, M Seuret, A Maier",
+      "venue": "Bildverarbeitung fÃ¼r die Medizin 2022: Proceedings, German Workshop on â€¦, 2022",
+      "conference": "BVM",
       "year": 2022,
-      "link": "https://scholar.google.com"
-    },
-    {
-      "title": "The students will learn advanced deep learning topics, including recent network architectures, generative models, self-supervision, interpretability and explainability. In the …",
-      "authors": "V Belagiannis, M Hölle",
-      "venue": "Module description, 489, 0",
-      "year": null,
+      "cover": "https://raw.githubusercontent.com/AmirMaEl/CycleAugmentGAN/main/overview.png",
       "link": "https://scholar.google.com"
     }
   ]

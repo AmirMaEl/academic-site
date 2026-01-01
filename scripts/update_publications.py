@@ -85,6 +85,8 @@ def parse_publications(html_text: str) -> List[Publication]:
         title = _clean(title_match.group(1))
         if not title:
             continue
+        if title.lower().startswith("the students will learn"):
+            continue
 
         link_match = LINK_PATTERN.search(row)
         relative_link = link_match.group(1) if link_match else ""
