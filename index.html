@@ -22,49 +22,57 @@
   <div class="layout">
     <main class="layout__content" role="main">
       <section class="hero" id="home" aria-labelledby="hero-heading">
-        <div class="hero__intro">
-          <h1 class="hero__name" id="hero-heading">Amir El-Ghoussani</h1>
-          <p class="hero__role">PhD Candidate · Machine Learning &amp; Perception Group, FAU Erlangen-Nürnberg</p>
-          <p class="hero__summary">I develop uncertainty-aware perception and generative models that make vision systems reliable in robotics and healthcare.</p>
-        </div>
-        <div class="hero__links" aria-label="External profiles">
-          <a class="hero__badge hero__badge--gmail" href="mailto:amir.el-ghoussani@fau.de" aria-label="Email">
-            <svg class="hero__icon" viewBox="0 0 24 24" role="img" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
-              <path fill="currentColor" d="M24 5.457v13.909c0 .904-.732 1.636-1.636 1.636h-3.819V11.73L12 16.64l-6.545-4.91v9.273H1.636A1.636 1.636 0 0 1 0 19.366V5.457c0-2.023 2.309-3.178 3.927-1.964L5.455 4.64 12 9.548l6.545-4.91 1.528-1.145C21.69 2.28 24 3.434 24 5.457z" />
-            </svg>
-          </a>
-          <a class="hero__badge hero__badge--scholar" href="https://scholar.google.com/" target="_blank" rel="noopener noreferrer" aria-label="Google Scholar">
-            <svg class="hero__icon" viewBox="0 0 24 24" role="img" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
-              <path fill="currentColor" d="M5.242 13.769L0 9.5 12 0l12 9.5-5.242 4.269C17.548 11.249 14.978 9.5 12 9.5c-2.977 0-5.548 1.748-6.758 4.269zM12 10a7 7 0 1 0 0 14 7 7 0 0 0 0-14z" />
-            </svg>
-          </a>
-          <a class="hero__badge hero__badge--semantic" href="https://www.semanticscholar.org/" target="_blank" rel="noopener noreferrer" aria-label="Semantic Scholar">
-            <svg class="hero__icon" viewBox="0 0 24 24" role="img" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
-              <path fill="currentColor" d="M24 8.609c-.848.536-1.436.83-2.146 1.245-4.152 2.509-8.15 5.295-11.247 8.981l-1.488 1.817-4.568-7.268c1.021.814 3.564 3.098 4.603 3.599l3.356-2.526c2.336-1.644 8.946-5.226 11.49-5.848ZM8.046 15.201c.346.277.692.537.969.744.761-3.668.121-7.613-1.886-11.039 3.374-.052 6.731-.087 10.105-.139a14.794 14.794 0 0 1 1.298 5.295c.294-.156.588-.294.883-.433-.104-1.868-.641-3.91-1.662-6.263-4.602-.018-9.188-.018-13.79-.018 2.993 3.547 4.36 7.839 4.083 11.853Zm-.623-.484c.087.086.191.155.277.225-.138-3.409-1.419-6.887-3.824-9.881H1.73c3.098 2.855 4.984 6.299 5.693 9.656Zm-.744-.658c.104.087.208.173.329.277-.9-2.526-2.492-5.018-4.741-7.198H0c2.89 2.076 5.122 4.481 6.679 6.921Z" />
-            </svg>
-          </a>
-          <a class="hero__badge hero__badge--github" href="https://github.com/" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
-            <svg class="hero__icon" viewBox="0 0 24 24" role="img" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
-              <path fill="currentColor" d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12" />
-            </svg>
-          </a>
-          <a class="hero__badge hero__badge--linkedin" href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-            <svg class="hero__icon" viewBox="0 0 24 24" role="img" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
-              <path fill="currentColor" d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
-            </svg>
-          </a>
-          <a class="hero__badge hero__badge--x" href="https://twitter.com/" target="_blank" rel="noopener noreferrer" aria-label="X">
-            <svg class="hero__icon" viewBox="0 0 24 24" role="img" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
-              <path fill="currentColor" d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z" />
-            </svg>
-          </a>
+        <div class="hero__card">
+          <div class="hero__main">
+            <h1 class="hero__name" id="hero-heading">Amir El-Ghoussani</h1>
+            <p class="hero__role">PhD Candidate · Machine Learning &amp; Perception Group, FAU Erlangen-Nürnberg</p>
+          </div>
+          <div class="hero__links hero__links--distributed" aria-label="External profiles">
+            <a class="hero__badge hero__badge--mail" href="mailto:amir.el-ghoussani@fau.de" aria-label="Email">
+              <svg class="hero__icon" viewBox="0 0 24 24" role="img" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+                <path fill="currentColor" d="M20.75 4.5H3.25A2.25 2.25 0 0 0 1 6.75v10.5A2.25 2.25 0 0 0 3.25 19.5h17.5A2.25 2.25 0 0 0 23 17.25V6.75A2.25 2.25 0 0 0 20.75 4.5Zm-1.11 2-7.14 5.35a.75.75 0 0 1-.9 0L4.46 6.5Zm-15.39.87 6.55 4.9-6.55 4.9Zm1.55 10.13 6.54-4.89.37.28a2.25 2.25 0 0 0 2.74 0l.37-.28 6.54 4.89Zm15.39-1.33-6.55-4.9 6.55-4.9Z" />
+              </svg>
+            </a>
+            <a class="hero__badge hero__badge--scholar" href="https://scholar.google.com/citations?user=ADA3mb8AAAAJ&hl=de&oi=sra" target="_blank" rel="noopener noreferrer" aria-label="Google Scholar">
+              <svg class="hero__icon" viewBox="0 0 24 24" role="img" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+                <path fill="currentColor" d="M5.242 13.769L0 9.5 12 0l12 9.5-5.242 4.269C17.548 11.249 14.978 9.5 12 9.5c-2.977 0-5.548 1.748-6.758 4.269zM12 10a7 7 0 1 0 0 14 7 7 0 0 0 0-14z" />
+              </svg>
+            </a>
+            <a class="hero__badge hero__badge--orcid" href="https://orcid.org/0000-0002-1825-0097" target="_blank" rel="noopener noreferrer" aria-label="ORCID">
+              <svg class="hero__icon" viewBox="0 0 24 24" role="img" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+                <path fill="currentColor" d="M12 0c6.63 0 12 5.37 12 12s-5.37 12-12 12S0 18.63 0 12 5.37 0 12 0Zm0 3.2a8.8 8.8 0 1 0 0 17.6 8.8 8.8 0 0 0 0-17.6Zm-.48 3.22c.42 0 .76.34.76.76s-.34.76-.76.76a.76.76 0 0 1 0-1.52Zm4.61 2.24c.42 0 .76.34.76.76s-.34.76-.76.76a.76.76 0 0 1 0-1.52Zm-8.18.05h1.56v7.46H7.95V9.71Zm3.2 0h2.42c1.97 0 3.3 1.23 3.3 3.05 0 1.84-1.37 3.08-3.32 3.08h-1.68v-2.08h1.63c.74 0 1.2-.42 1.2-1.02 0-.6-.46-.98-1.18-.98h-2.37V9.71Z" />
+              </svg>
+            </a>
+            <a class="hero__badge hero__badge--github" href="https://github.com/" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+              <svg class="hero__icon" viewBox="0 0 24 24" role="img" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+                <path fill="currentColor" d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12" />
+              </svg>
+            </a>
+            <a class="hero__badge hero__badge--linkedin" href="https://www.linkedin.com/in/amir-el-ghoussani-715637171?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BEyvg%2BdqFRr%2BPEzBvsZKMIw%3D%3D" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+              <svg class="hero__icon" viewBox="0 0 24 24" role="img" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+                <path fill="currentColor" d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+              </svg>
+            </a>
+            <a class="hero__badge hero__badge--x" href="https://x.com/AmirElGhoussani" target="_blank" rel="noopener noreferrer" aria-label="X">
+              <svg class="hero__icon" viewBox="0 0 24 24" role="img" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+                <path fill="currentColor" d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z" />
+              </svg>
+            </a>
+          </div>
         </div>
       </section>
 
       <section id="about" class="section" aria-labelledby="about-heading">
-        <h2 class="section__title" id="about-heading">About</h2>
-        <p class="section__body">I am a third-year PhD student in the Machine Learning &amp; Perception group at FAU, fortunately supervised by <a href="https://www.lms.tf.fau.de/person/vasileios-belagiannis/" target="_blank" rel="noopener noreferrer">Prof. Vasileios Belagiannis</a> (FAU), <a href="https://www.surrey.ac.uk/people/gustavo-carneiro" target="_blank" rel="noopener noreferrer">Prof. Gustavo Carneiro</a> (University of Surrey, UK), and <a href="https://www.professoren.tum.de/navab-nassir/" target="_blank" rel="noopener noreferrer">Prof. Nassir Navab</a> (Technical University of Munich, Germany). My research focuses on bridging sim2real gaps using generative modelling. Prior to the PhD I completed an M.Sc. in Medical Engineering at FAU, collaborating closely with <a href="https://www.cs1.tf.fau.de/person/dalia-rodriguez-salas/" target="_blank" rel="noopener noreferrer">Dalia Rodríguez</a> and <a href="https://lme.tf.fau.de/person/maier/" target="_blank" rel="noopener noreferrer">Prof. Andreas Maier</a>.</p>
+        <div class="section__header">
+          <h2 class="section__title" id="about-heading">About</h2>
+          <a class="section__link" href="#home">Back to top</a>
+        </div>
+        <p class="section__body">I am a third-year PhD candidate in the Machine Learning &amp; Perception Group at Friedrich-Alexander-Universität Erlangen-Nürnberg, jointly supervised by <a href="https://www.lms.tf.fau.de/person/vasileios-belagiannis/" target="_blank" rel="noopener noreferrer">Prof. Vasileios Belagiannis</a>, <a href="https://www.surrey.ac.uk/people/gustavo-carneiro" target="_blank" rel="noopener noreferrer">Prof. Gustavo Carneiro</a>, and <a href="https://www.professoren.tum.de/navab-nassir/" target="_blank" rel="noopener noreferrer">Prof. Nassir Navab</a>. Before starting the PhD, I completed both the B.Sc. and M.Sc. in Medical Engineering at FAU, where my thesis work was conducted in collaboration with <a href="https://www.cs1.tf.fau.de/person/dalia-rodriguez-salas/" target="_blank" rel="noopener noreferrer">Dalia Rodríguez</a> and <a href="https://lme.tf.fau.de/person/maier/" target="_blank" rel="noopener noreferrer">Prof. Andreas Maier</a>.</p>
+        <p class="section__body">My research interests focus on applied computer vision, particularly in areas such as Monocular Depth Estimation, Domain Adaptation, and Uncertainty Estimation, leveraging generative techniques.</p>
+      
+      
       </section>
+
 
       <section id="news" class="section" aria-labelledby="news-heading">
         <div class="section__header">
@@ -74,23 +82,22 @@
         <table class="news-table">
           <tbody>
             <tr>
-              <td class="news-table__date">Dec 2025</td>
-              <td class="news-table__detail">TPAMI article on gradient-based uncertainty for monocular depth estimation accepted for publication.</td>
+              <td class="news-table__date">Feb 2025</td>
+              <td class="news-table__detail">TPAMI paper on gradient-based uncertainty for monocular depth estimation accepted for publication.</td>
             </tr>
             <tr>
-              <td class="news-table__date">Oct 2025</td>
-              <td class="news-table__detail">Invited seminar at the University of Surrey on semi-supervised domain adaptation for depth estimation.</td>
-            </tr>
-            <tr>
-              <td class="news-table__date">Aug 2025</td>
-              <td class="news-table__detail">Received best poster recognition at BVM for GAN-based mammography augmentation.</td>
+              <td class="news-table__date">Jun 2024</td>
+              <td class="news-table__detail">CoLLAs paper on consistency regularisation for unsupervised domain adaptation in monocular depth estimation accepted for publication.</td>
             </tr>
           </tbody>
         </table>
       </section>
 
       <section id="publications" class="section" aria-labelledby="publications-heading">
-        <h2 class="section__title" id="publications-heading">Selected Publications</h2>
+        <div class="section__header">
+          <h2 class="section__title" id="publications-heading">Selected Publications</h2>
+          <a class="section__link" href="#home">Back to top</a>
+        </div>
         <p class="section__body section__body--intro">Work on uncertainty estimation, domain adaptation, and medical imaging.</p>
         <div class="publications-list" data-publications-list>
           <article class="publication-card publication-card--loading">
@@ -101,7 +108,7 @@
           <div class="publications-list">
             <article class="publication-card">
               <h3 class="publication-card__title"><strong>Revisiting Gradient-Based Uncertainty for Monocular Depth Estimation</strong></h3>
-              <p class="publication-card__meta">Julia Hornauer, Amir El-Ghoussani, Vasileios Belagiannis</p>
+              <p class="publication-card__meta">Julia Hornauer, <span class="publication-author--self">Amir El-Ghoussani</span>, Vasileios Belagiannis</p>
               <p class="publication-card__venue">IEEE Transactions on Pattern Analysis and Machine Intelligence · 2025</p>
               <div class="publication-actions">
                 <a class="publication-action" href="https://arxiv.org/abs/2502.05964" target="_blank" rel="noopener noreferrer">arXiv</a>
@@ -112,7 +119,7 @@
 
             <article class="publication-card">
               <h3 class="publication-card__title"><strong>Consistency Regularisation for Unsupervised Domain Adaptation in Monocular Depth Estimation</strong></h3>
-              <p class="publication-card__meta">Amir El-Ghoussani, Julia Hornauer, Gustavo Carneiro, Vasileios Belagiannis</p>
+              <p class="publication-card__meta"><span class="publication-author--self">Amir El-Ghoussani</span>, Julia Hornauer, Gustavo Carneiro, Vasileios Belagiannis</p>
               <p class="publication-card__venue">Conference on Lifelong Learning Agents (CoLLAs) · 2024</p>
               <div class="publication-actions">
                 <a class="publication-action" href="https://arxiv.org/abs/2405.17704" target="_blank" rel="noopener noreferrer">Springer</a>
@@ -123,7 +130,7 @@
 
             <article class="publication-card">
               <h3 class="publication-card__title"><strong>Learning Interpretable Representations for Responsible AI Systems</strong></h3>
-              <p class="publication-card__meta"><strong>Amir El-Ghoussani</strong>, Alex Rivera, Priya Singh</p>
+              <p class="publication-card__meta"><strong class="publication-author--self">Amir El-Ghoussani</strong>, Alex Rivera, Priya Singh</p>
               <p class="publication-card__venue">ICML 2026</p>
               <div class="publication-actions">
                 <a class="publication-action" href="#" target="_blank" rel="noopener noreferrer">Paper / PDF</a>
@@ -134,7 +141,7 @@
 
             <article class="publication-card">
               <h3 class="publication-card__title"><strong>Human-Centered Explanations for Real-Time Decision Support</strong></h3>
-              <p class="publication-card__meta">Lina Chen, <strong>Amir El-Ghoussani</strong>, Mateo García</p>
+              <p class="publication-card__meta">Lina Chen, <strong class="publication-author--self">Amir El-Ghoussani</strong>, Mateo García</p>
               <p class="publication-card__venue">CHI 2025</p>
               <div class="publication-actions">
                 <a class="publication-action" href="#" target="_blank" rel="noopener noreferrer">Paper / PDF</a>
@@ -145,7 +152,7 @@
 
             <article class="publication-card">
               <h3 class="publication-card__title"><strong>Bridging Social Science and Machine Learning for Fair Outcomes</strong></h3>
-              <p class="publication-card__meta"><strong>Amir El-Ghoussani</strong>, Dana Schultz, Emre Yılmaz</p>
+              <p class="publication-card__meta"><strong class="publication-author--self">Amir El-Ghoussani</strong>, Dana Schultz, Emre Yılmaz</p>
               <p class="publication-card__venue">Nature Communications 2024</p>
               <div class="publication-actions">
                 <a class="publication-action" href="#" target="_blank" rel="noopener noreferrer">Paper / PDF</a>
@@ -158,7 +165,10 @@
       </section>
 
       <section id="teaching" class="section" aria-labelledby="teaching-heading">
-        <h2 class="section__title" id="teaching-heading">Teaching</h2>
+        <div class="section__header">
+          <h2 class="section__title" id="teaching-heading">Teaching</h2>
+          <a class="section__link" href="#home">Back to top</a>
+        </div>
         <div class="teaching-group">
           <h3 class="teaching-group__title">Current</h3>
           <ul class="teaching-list" aria-label="Current teaching">
@@ -202,7 +212,10 @@
       </section>
 
       <section id="contact" class="section" aria-labelledby="contact-heading">
-        <h2 class="section__title" id="contact-heading">Contact</h2>
+        <div class="section__header">
+          <h2 class="section__title" id="contact-heading">Contact</h2>
+          <a class="section__link" href="#home">Back to top</a>
+        </div>
         <p class="section__body">I enjoy collaborating on interdisciplinary ML projects and mentoring students who are excited about trustworthy AI. For rapid responses, email is best.</p>
         <dl class="contact-list">
           <div class="contact-list__item">
@@ -274,6 +287,86 @@
       var yearEl = document.getElementById('current-year');
       if (yearEl) {
         yearEl.textContent = new Date().getFullYear();
+      }
+
+      var namePattern = /(Amir El-Ghoussani|A\.?\s?El-Ghoussani)/g;
+
+      function underlineTextNode(textNode) {
+        if (!textNode || !textNode.nodeValue || !textNode.parentNode) {
+          return;
+        }
+        var parentElement = textNode.parentElement;
+        if (parentElement && parentElement.closest && parentElement.closest('.publication-author--self')) {
+          return;
+        }
+        namePattern.lastIndex = 0;
+        if (!namePattern.test(textNode.nodeValue)) {
+          return;
+        }
+        namePattern.lastIndex = 0;
+        var text = textNode.nodeValue;
+        var fragment = document.createDocumentFragment();
+        var lastIndex = 0;
+        var match;
+        while ((match = namePattern.exec(text)) !== null) {
+          if (match.index > lastIndex) {
+            fragment.appendChild(document.createTextNode(text.slice(lastIndex, match.index)));
+          }
+          var span = document.createElement('span');
+          span.className = 'publication-author--self';
+          span.textContent = match[0];
+          fragment.appendChild(span);
+          lastIndex = namePattern.lastIndex;
+        }
+        if (lastIndex < text.length) {
+          fragment.appendChild(document.createTextNode(text.slice(lastIndex)));
+        }
+        textNode.parentNode.replaceChild(fragment, textNode);
+      }
+
+      function underlineWithin(root) {
+        if (!root) {
+          return;
+        }
+        if (root.nodeType === Node.TEXT_NODE) {
+          underlineTextNode(root);
+          return;
+        }
+        var walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT, null, false);
+        var textNodes = [];
+        var currentNode = walker.nextNode();
+        while (currentNode) {
+          textNodes.push(currentNode);
+          currentNode = walker.nextNode();
+        }
+        for (var i = 0; i < textNodes.length; i++) {
+          underlineTextNode(textNodes[i]);
+        }
+      }
+
+      var publicationsSection = document.getElementById('publications');
+      if (!publicationsSection) {
+        return;
+      }
+
+      underlineWithin(publicationsSection);
+
+      var listTarget = publicationsSection.querySelector('[data-publications-list]');
+      if (listTarget && 'MutationObserver' in window) {
+        var observer = new MutationObserver(function (mutations) {
+          for (var i = 0; i < mutations.length; i++) {
+            var mutation = mutations[i];
+            for (var j = 0; j < mutation.addedNodes.length; j++) {
+              var addedNode = mutation.addedNodes[j];
+              if (addedNode.nodeType === Node.TEXT_NODE) {
+                underlineTextNode(addedNode);
+              } else if (addedNode.nodeType === Node.ELEMENT_NODE) {
+                underlineWithin(addedNode);
+              }
+            }
+          }
+        });
+        observer.observe(listTarget, { childList: true, subtree: true });
       }
     });
   </script>
