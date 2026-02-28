@@ -32,6 +32,20 @@
     return [];
   }
 
+  function escapeHtml(value) {
+    return String(value)
+      .replace(/&/g, "&amp;")
+      .replace(/</g, "&lt;")
+      .replace(/>/g, "&gt;")
+      .replace(/\"/g, "&quot;")
+      .replace(/'/g, "&#39;");
+  }
+
+  function formatAuthors(authors) {
+    const safeAuthors = escapeHtml(authors);
+    return safeAuthors.replace(/\b(Amir El-Ghoussani|A\.?\s?El-Ghoussani)\b/g, '<span class="publication-author--self">$1</span>');
+  }
+
   function createCard(publication) {
     const article = document.createElement("article");
     article.className = "publication-card";
@@ -74,7 +88,7 @@
     if (publication.authors) {
       const authorsEl = document.createElement("p");
       authorsEl.className = "publication-card__meta";
-      authorsEl.textContent = publication.authors;
+      authorsEl.innerHTML = formatAuthors(publication.authors);
       content.appendChild(authorsEl);
     }
 
@@ -98,17 +112,6 @@
     }
 
     return article;
-  }
-
-  function sortPublications(publications) {
-    return [...publications].sort((a, b) => {
-      const yearA = typeof a.year === "number" ? a.year : parseInt(a.year, 10) || 0;
-      const yearB = typeof b.year === "number" ? b.year : parseInt(b.year, 10) || 0;
-      if (yearA !== yearB) {
-        return yearB - yearA;
-      }
-      return a.title.localeCompare(b.title);
-    });
   }
 
   async function hydratePublications() {
@@ -140,7 +143,7 @@
       }
 
       list.innerHTML = "";
-      sortPublications(publications).forEach((publication) => {
+      publications.forEach((publication) => {
         list.appendChild(createCard(publication));
       });
     } catch (error) {

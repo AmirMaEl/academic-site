@@ -89,6 +89,16 @@ body {
   text-decoration: none;
 }
 
+.news-table__accepted-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 0.45rem;
+  font-size: 0.95rem;
+  line-height: 1;
+  vertical-align: baseline;
+}
+
 a {
   color: var(--color-link);
   text-decoration: none;
@@ -401,6 +411,301 @@ img {
   font-size: 1rem;
   color: var(--color-text);
   line-height: 1.7;
+}
+
+.is-hidden {
+  display: none !important;
+}
+
+.iclr-game {
+  position: relative;
+  border: 1px solid rgba(35, 56, 118, 0.25);
+  border-radius: var(--radius-lg);
+  background:
+    linear-gradient(135deg, rgba(11, 27, 58, 0.35), rgba(29, 78, 216, 0.35)),
+    radial-gradient(circle at 20% -10%, rgba(255, 255, 255, 0.35), transparent 60%),
+    var(--color-surface);
+  padding: 32px;
+  box-shadow: 0 35px 65px rgba(11, 27, 58, 0.25);
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  overflow: hidden;
+}
+
+.iclr-game::after {
+  content: "";
+  position: absolute;
+  inset: -40% 40% 10% -10%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.25), transparent 60%);
+  pointer-events: none;
+  opacity: 0.7;
+}
+
+.iclr-game__status {
+  padding: 12px 16px;
+  border-radius: var(--radius-sm);
+  background: var(--color-surface-alt);
+  border: 1px solid var(--color-border);
+  font-weight: 600;
+  color: var(--color-muted);
+}
+
+.iclr-game__status--error {
+  color: #b42318;
+  border-color: rgba(180, 35, 24, 0.4);
+  background: rgba(239, 68, 68, 0.08);
+}
+
+.iclr-game__panel {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.iclr-game__topics {
+  .iclr-game__dropdown,
+  .iclr-game__select {
+    width: 100%;
+  }
+  flex-direction: column;
+  gap: 12px;
+}
+
+.iclr-game__topics-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.iclr-game__topics-footer {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.iclr-game__dropdown {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.iclr-game__dropdown-label {
+  font-weight: 600;
+  color: var(--color-heading);
+}
+
+.iclr-game__select {
+  appearance: none;
+  border: 1px solid rgba(29, 78, 216, 0.3);
+  border-radius: var(--radius-sm);
+  padding: 0.65rem 0.9rem;
+  font-size: 1rem;
+  font-family: inherit;
+  background:
+    linear-gradient(135deg, rgba(11, 27, 58, 0.05), rgba(29, 78, 216, 0.05)),
+    #fff;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.6), 0 10px 20px rgba(15, 23, 42, 0.08);
+  color: var(--color-heading);
+  min-height: 48px;
+}
+
+.iclr-game__select:focus-visible {
+  outline: 2px solid var(--color-link);
+  outline-offset: 2px;
+}
+
+.iclr-game__select:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+.iclr-game__note,
+.iclr-game__hint {
+  margin: 0;
+  color: var(--color-muted);
+  font-size: 0.95rem;
+}
+
+.iclr-game__card,
+.iclr-game__results {
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: var(--radius-md);
+  background: rgba(255, 255, 255, 0.92);
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.65), 0 20px 35px rgba(11, 27, 58, 0.12);
+  backdrop-filter: blur(8px);
+}
+
+.iclr-game__progress {
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  color: var(--color-muted);
+}
+
+.iclr-game__paper-title {
+  margin: 0;
+  font-size: 1.3rem;
+  color: var(--color-heading);
+}
+
+.iclr-game__paper-meta {
+  margin: 0;
+  font-size: 0.95rem;
+  color: var(--color-muted);
+}
+
+.iclr-game__abstract {
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--color-border);
+  background: var(--color-surface);
+  padding: 16px;
+  max-height: 240px;
+  overflow-y: auto;
+  white-space: pre-line;
+  line-height: 1.65;
+  color: var(--color-text);
+}
+
+.iclr-game__label {
+  font-weight: 600;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin: 0;
+}
+
+.iclr-game__input-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: center;
+}
+
+.iclr-game__input-row input[type="number"] {
+  padding: 10px 14px;
+  font-size: 1rem;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--color-border);
+  width: 140px;
+}
+
+.iclr-game__button {
+  border: none;
+  border-radius: var(--radius-sm);
+  background: var(--color-link);
+  color: #ffffff;
+  font-weight: 600;
+  padding: 0.65rem 1.4rem;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, opacity 0.2s ease;
+  box-shadow: 0 10px 20px rgba(29, 78, 216, 0.18);
+}
+
+.iclr-game__button:hover,
+.iclr-game__button:focus-visible {
+  transform: translateY(-1px);
+  box-shadow: 0 16px 26px rgba(29, 78, 216, 0.25);
+  text-decoration: none;
+}
+
+.iclr-game__button:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+.iclr-game__button--ghost {
+  background: transparent;
+  color: var(--color-link);
+  border: 1px solid var(--color-border);
+  box-shadow: none;
+}
+
+.iclr-game__feedback {
+  margin: 0;
+  font-weight: 600;
+  color: var(--color-heading);
+}
+
+.iclr-game__feedback--error {
+  color: #b42318;
+}
+
+.iclr-game__results-heading {
+  margin: 0;
+}
+
+.iclr-game__results-table {
+  overflow-x: auto;
+}
+
+.iclr-game__table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.iclr-game__table th,
+.iclr-game__table td {
+  padding: 10px;
+  border-bottom: 1px solid var(--color-border);
+  text-align: left;
+}
+
+.iclr-game__table-title {
+  font-size: 0.95rem;
+  color: var(--color-heading);
+}
+
+.iclr-game__table-id {
+  font-size: 0.85rem;
+  color: var(--color-muted);
+}
+
+@media (max-width: 640px) {
+  .iclr-game {
+    padding: 20px;
+  }
+
+  .iclr-game__card,
+  .iclr-game__results {
+    padding: 16px;
+  }
+
+  .iclr-game__topics {
+    padding: 12px;
+  }
+
+  .iclr-game__topics-footer {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .iclr-game__dropdown,
+  .iclr-game__select {
+    width: 100%;
+  }
+
+  .iclr-game__input-row input[type="number"] {
+    width: 100%;
+  }
+
+  .iclr-game__button {
+    width: 100%;
+    text-align: center;
+  }
 }
 
 .project-card__links {

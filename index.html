@@ -4,6 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Amir El-Ghoussani · Academic Homepage</title>
+  <link rel="icon" type="image/svg+xml" href='data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"%3E%3Ccircle cx="32" cy="32" r="30" fill="%231d4ed8"/%3E%3Ccircle cx="32" cy="24" r="10" fill="white"/%3E%3Cpath d="M14 51c2.5-10 10-16 18-16s15.5 6 18 16" fill="white"/%3E%3C/svg%3E'>
   <link rel="stylesheet" href="style.css">
   <style>
     .project-card__link--button {
@@ -32,6 +33,16 @@
       outline: 3px solid var(--focus-ring, rgba(26, 78, 216, 0.35));
       outline-offset: 2px;
     }
+    
+    .contact-subsection {
+      margin-top: 1.75rem;
+    }
+    
+    .contact-subsection h3 {
+      font-size: 1.15rem;
+      margin-bottom: 0.4rem;
+    }
+
   </style>
 </head>
 <body>
@@ -41,7 +52,6 @@
         <a class="site-header__link" href="#about">About</a>
         <a class="site-header__link" href="#news">News</a>
         <a class="site-header__link" href="#publications">Publications</a>
-        <a class="site-header__link" href="#projects">Projects</a>
         <a class="site-header__link" href="#teaching">Teaching</a>
         <a class="site-header__link" href="#contact">Contact</a>
       </nav>
@@ -67,12 +77,12 @@
                 <path fill="currentColor" d="M5.242 13.769L0 9.5 12 0l12 9.5-5.242 4.269C17.548 11.249 14.978 9.5 12 9.5c-2.977 0-5.548 1.748-6.758 4.269zM12 10a7 7 0 1 0 0 14 7 7 0 0 0 0-14z" />
               </svg>
             </a>
-            <a class="hero__badge hero__badge--orcid" href="https://orcid.org/0000-0002-1825-0097" target="_blank" rel="noopener noreferrer" aria-label="ORCID">
+            <a class="hero__badge hero__badge--orcid" href="https://orcid.org/0009-0009-5645-6684" target="_blank" rel="noopener noreferrer" aria-label="ORCID">
               <svg class="hero__icon" viewBox="0 0 24 24" role="img" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
                 <path fill="currentColor" d="M12 0c6.63 0 12 5.37 12 12s-5.37 12-12 12S0 18.63 0 12 5.37 0 12 0Zm0 3.2a8.8 8.8 0 1 0 0 17.6 8.8 8.8 0 0 0 0-17.6Zm-.48 3.22c.42 0 .76.34.76.76s-.34.76-.76.76a.76.76 0 0 1 0-1.52Zm4.61 2.24c.42 0 .76.34.76.76s-.34.76-.76.76a.76.76 0 0 1 0-1.52Zm-8.18.05h1.56v7.46H7.95V9.71Zm3.2 0h2.42c1.97 0 3.3 1.23 3.3 3.05 0 1.84-1.37 3.08-3.32 3.08h-1.68v-2.08h1.63c.74 0 1.2-.42 1.2-1.02 0-.6-.46-.98-1.18-.98h-2.37V9.71Z" />
               </svg>
             </a>
-            <a class="hero__badge hero__badge--github" href="https://github.com/" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+            <a class="hero__badge hero__badge--github" href="https://github.com/AmirMaEl" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
               <svg class="hero__icon" viewBox="0 0 24 24" role="img" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
                 <path fill="currentColor" d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12" />
               </svg>
@@ -101,29 +111,6 @@
       
       
       </section>
-
-      <section id="projects" class="section" aria-labelledby="projects-heading">
-        <div class="section__header">
-          <h2 class="section__title" id="projects-heading">Projects</h2>
-          <a class="section__link" href="#home">Back to top</a>
-        </div>
-        <div class="projects-grid" data-projects-grid>
-          <article class="project-card" data-project-year="2025" data-project-order="paper-acceptance-game">
-            <div class="project-card__meta">
-              <span class="project-card__tag">Playful Research</span>
-              <span class="project-card__year">2025</span>
-            </div>
-            <h3 class="project-card__title">Paper Acceptance Game</h3>
-            <p class="project-card__summary">A lightweight web experience that gamifies conference reviews—players submit mock manuscripts, reconcile reviewer feedback, and navigate accept or reject outcomes to understand peer-review dynamics.</p>
-            <div class="project-card__links">
-              <a class="project-card__link project-card__link--button" href="paper-acceptance-game.html" aria-label="Play the Paper Acceptance Game">Play the game</a>
-              <a class="project-card__link" href="#" aria-label="Paper Acceptance Game prototype">Prototype</a>
-              <a class="project-card__link" href="#" aria-label="Paper Acceptance Game design notes">Design notes</a>
-            </div>
-          </article>
-        </div>
-      </section>
-
       <section id="news" class="section" aria-labelledby="news-heading">
         <div class="section__header">
           <h2 class="section__title" id="news-heading">News</h2>
@@ -132,11 +119,19 @@
         <table class="news-table">
           <tbody>
             <tr>
-              <td class="news-table__date">Feb 2025</td>
+              <td class="news-table__date">Feb 2026<span class="news-table__accepted-badge" role="img" aria-label="Publication accepted">🎉</span></td>
+              <td class="news-table__detail">One CVPR (Findings) paper on prompt-guided image editing with VAR models accepted for publication.</td>
+            </tr>
+            <tr>
+              <td class="news-table__date">Nov 2025<span class="news-table__accepted-badge" role="img" aria-label="Publication accepted">🎉</span></td>
+              <td class="news-table__detail">VISAPP paper on depth estimation with VAR models accepted for publication.</td>
+            </tr>
+            <tr>
+              <td class="news-table__date">Feb 2025<span class="news-table__accepted-badge" role="img" aria-label="Publication accepted">🎉</span></td>
               <td class="news-table__detail">TPAMI paper on gradient-based uncertainty for monocular depth estimation accepted for publication.</td>
             </tr>
             <tr>
-              <td class="news-table__date">Jun 2024</td>
+              <td class="news-table__date">Jun 2024<span class="news-table__accepted-badge" role="img" aria-label="Publication accepted">🎉</span></td>
               <td class="news-table__detail">CoLLAs paper on consistency regularisation for unsupervised domain adaptation in monocular depth estimation accepted for publication.</td>
             </tr>
           </tbody>
@@ -148,70 +143,8 @@
           <h2 class="section__title" id="publications-heading">Selected Publications</h2>
           <a class="section__link" href="#home">Back to top</a>
         </div>
-        <p class="section__body section__body--intro">Work on uncertainty estimation, domain adaptation, and medical imaging.</p>
-        <div class="publications-list" data-publications-list>
-          <article class="publication-card publication-card--loading">
-            <p>Loading publications...</p>
-          </article>
-        </div>
-        <noscript>
-          <div class="publications-list">
-            <article class="publication-card">
-              <h3 class="publication-card__title"><strong>Revisiting Gradient-Based Uncertainty for Monocular Depth Estimation</strong></h3>
-              <p class="publication-card__meta">Julia Hornauer, <span class="publication-author--self">Amir El-Ghoussani</span>, Vasileios Belagiannis</p>
-              <p class="publication-card__venue">IEEE Transactions on Pattern Analysis and Machine Intelligence · 2025</p>
-              <div class="publication-actions">
-                <a class="publication-action" href="https://arxiv.org/abs/2502.05964" target="_blank" rel="noopener noreferrer">arXiv</a>
-                <a class="publication-action" href="https://arxiv.org/pdf/2502.05964" target="_blank" rel="noopener noreferrer">PDF</a>
-                <a class="publication-action" href="https://github.com/jhornauer/GrUMoDepth" target="_blank" rel="noopener noreferrer">Code</a>
-              </div>
-            </article>
-
-            <article class="publication-card">
-              <h3 class="publication-card__title"><strong>Consistency Regularisation for Unsupervised Domain Adaptation in Monocular Depth Estimation</strong></h3>
-              <p class="publication-card__meta"><span class="publication-author--self">Amir El-Ghoussani</span>, Julia Hornauer, Gustavo Carneiro, Vasileios Belagiannis</p>
-              <p class="publication-card__venue">Conference on Lifelong Learning Agents (CoLLAs) · 2024</p>
-              <div class="publication-actions">
-                <a class="publication-action" href="https://arxiv.org/abs/2405.17704" target="_blank" rel="noopener noreferrer">Springer</a>
-                <a class="publication-action" href="https://arxiv.org/pdf/2405.17704" target="_blank" rel="noopener noreferrer">PDF</a>
-                <a class="publication-action" href="https://github.com/AmirMaEl/SemiSupMDE" target="_blank" rel="noopener noreferrer">Code</a>
-              </div>
-            </article>
-
-            <article class="publication-card">
-              <h3 class="publication-card__title"><strong>Learning Interpretable Representations for Responsible AI Systems</strong></h3>
-              <p class="publication-card__meta"><strong class="publication-author--self">Amir El-Ghoussani</strong>, Alex Rivera, Priya Singh</p>
-              <p class="publication-card__venue">ICML 2026</p>
-              <div class="publication-actions">
-                <a class="publication-action" href="#" target="_blank" rel="noopener noreferrer">Paper / PDF</a>
-                <a class="publication-action" href="#" target="_blank" rel="noopener noreferrer">Code / GitHub</a>
-                <a class="publication-action" href="#" target="_blank" rel="noopener noreferrer">Project Page</a>
-              </div>
-            </article>
-
-            <article class="publication-card">
-              <h3 class="publication-card__title"><strong>Human-Centered Explanations for Real-Time Decision Support</strong></h3>
-              <p class="publication-card__meta">Lina Chen, <strong class="publication-author--self">Amir El-Ghoussani</strong>, Mateo García</p>
-              <p class="publication-card__venue">CHI 2025</p>
-              <div class="publication-actions">
-                <a class="publication-action" href="#" target="_blank" rel="noopener noreferrer">Paper / PDF</a>
-                <a class="publication-action" href="#" target="_blank" rel="noopener noreferrer">Code / GitHub</a>
-                <a class="publication-action" href="#" target="_blank" rel="noopener noreferrer">Project Page</a>
-              </div>
-            </article>
-
-            <article class="publication-card">
-              <h3 class="publication-card__title"><strong>Bridging Social Science and Machine Learning for Fair Outcomes</strong></h3>
-              <p class="publication-card__meta"><strong class="publication-author--self">Amir El-Ghoussani</strong>, Dana Schultz, Emre Yılmaz</p>
-              <p class="publication-card__venue">Nature Communications 2024</p>
-              <div class="publication-actions">
-                <a class="publication-action" href="#" target="_blank" rel="noopener noreferrer">Paper / PDF</a>
-                <a class="publication-action" href="#" target="_blank" rel="noopener noreferrer">Code / GitHub</a>
-                <a class="publication-action" href="#" target="_blank" rel="noopener noreferrer">Project Page</a>
-              </div>
-            </article>
-          </div>
-        </noscript>
+        <p class="section__body section__body--intro">Work on uncertainty estimation, domain adaptation, depth estimation and medical imaging.</p>
+        <div class="publications-list" data-publications-list></div>
       </section>
 
       <section id="teaching" class="section" aria-labelledby="teaching-heading">
@@ -223,16 +156,9 @@
           <h3 class="teaching-group__title">Current</h3>
           <ul class="teaching-list" aria-label="Current teaching">
             <li class="teaching-item">
-              <h4 class="teaching-item__course">CS542: Trustworthy Machine Learning</h4>
-              <p class="teaching-item__meta">Lecturer · Spring 2026</p>
-              <p class="teaching-item__summary">Graduate seminar examining robust, interpretable, and aligned ML systems through research papers and hands-on projects.</p>
-              <a class="teaching-item__link" href="#" target="_blank" rel="noopener noreferrer">Syllabus</a>
-            </li>
-            <li class="teaching-item">
-              <h4 class="teaching-item__course">CS312: Data Ethics &amp; Policy</h4>
-              <p class="teaching-item__meta">Co-Instructor · Spring 2026</p>
-              <p class="teaching-item__summary">Interdisciplinary undergraduate course exploring the societal impacts of data science and AI policy frameworks.</p>
-              <a class="teaching-item__link" href="#" target="_blank" rel="noopener noreferrer">Course Materials</a>
+              <h4 class="teaching-item__course">MLISP: Machine Learning in Signal Processing</h4>
+              <p class="teaching-item__meta">Teaching Assistant · WS 25/26 + WS 24/25</p>
+              <p class="teaching-item__summary">Exercises in fundamentals of  machine learning with programming assignments in Python.</p>
             </li>
           </ul>
         </div>
@@ -240,33 +166,25 @@
           <h3 class="teaching-group__title">Past</h3>
           <ul class="teaching-list" aria-label="Past teaching">
             <li class="teaching-item">
-              <h4 class="teaching-item__course">CS101: Introduction to Artificial Intelligence</h4>
-              <p class="teaching-item__meta">Lecturer · Fall 2025</p>
-              <p class="teaching-item__summary">Foundational overview of AI concepts and applications with weekly programming assignments in Python.</p>
-              <a class="teaching-item__link" href="#" target="_blank" rel="noopener noreferrer">Syllabus</a>
+              <h4 class="teaching-item__course">ATDL: Advanced Topics in Deep Learning</h4>
+              <p class="teaching-item__meta">Teaching Assistant · SS 2025 + SS 2024</p>
+              <p class="teaching-item__summary">Foundational overview of advanced AI concepts and applications with weekly programming assignments in Python.</p>
             </li>
             <li class="teaching-item">
-              <h4 class="teaching-item__course">CS555: Explainable AI</h4>
-              <p class="teaching-item__meta">Teaching Assistant · Spring 2025</p>
-              <p class="teaching-item__summary">Graduate-level course covering theory and practice of explainable models with lab sessions and project mentoring.</p>
-              <a class="teaching-item__link" href="#" target="_blank" rel="noopener noreferrer">Course Site</a>
-            </li>
-            <li class="teaching-item">
-              <h4 class="teaching-item__course">CS204: Human-Computer Interaction</h4>
-              <p class="teaching-item__meta">Teaching Assistant · Fall 2024</p>
-              <p class="teaching-item__summary">Studio-focused introduction to HCI principles with emphasis on prototyping, usability testing, and inclusive design.</p>
-              <a class="teaching-item__link" href="#" target="_blank" rel="noopener noreferrer">Course Materials</a>
+              <h4 class="teaching-item__course">SemML: Seminar on Selected Topics in Machine Learning</h4>
+              <p class="teaching-item__meta">Teaching Assistant · SS 2025 + SS 2024</p>
+              <p class="teaching-item__summary">Students present scientific publications from the literature on machine learning and deep learning.</p>
             </li>
           </ul>
         </div>
       </section>
-
+ 
       <section id="contact" class="section" aria-labelledby="contact-heading">
         <div class="section__header">
           <h2 class="section__title" id="contact-heading">Contact</h2>
           <a class="section__link" href="#home">Back to top</a>
         </div>
-        <p class="section__body">I enjoy collaborating on interdisciplinary ML projects and mentoring students who are excited about trustworthy AI. For rapid responses, email is best.</p>
+        <p class="section__body">For general inquiries, please use the contact details below.</p>
         <dl class="contact-list">
           <div class="contact-list__item">
             <dt>Email</dt>
@@ -274,9 +192,25 @@
           </div>
           <div class="contact-list__item">
             <dt>Office</dt>
-            <dd>Room 02.136, Martensstr. 3, FAU Erlangen-Nürnberg</dd>
+            <dd>Room 06.036, Cauerstr. 7, FAU Erlangen-Nürnberg</dd>
           </div>
         </dl>
+
+        <div id="collaborations" class="contact-subsection" aria-labelledby="collaborations-heading">
+          <h3 id="collaborations-heading">Collaborations</h3>
+          <p class="section__body">I welcome industry and academic partners interested in applied generative computer vision (such as diffusion models or visual autoregressive models), Monoculardepth estimation, and uncertainty modeling. Drop me a mail <a href="mailto:amir.el-ghoussani@fau.de">here</a></p>
+        </div>
+
+        <div id="prospective-students" class="contact-subsection" aria-labelledby="prospective-heading">
+          <h3 id="prospective-heading">Prospective Students</h3>
+          <p class="section__body">For theses or research projects with our group, please prepare the following materials:</p>
+          <ul class="section__body">
+            <li>Most recent academic transcript (unofficial copies are fine for the initial review).</li>
+            <li>If your program is outside the Department of EEI, include an official confirmation from your program advisors that our group may supervise your thesis or project.</li>
+          </ul>
+          <p class="section__body">Due to the high volume of applications, we may be unable to respond to every inquiry individually, but we appreciate your interest.</p>
+          <p class="section__body">Send your materials <a href="mailto:amir.el-ghoussani@fau.de">here </a> and indicate whether you want to apply for a thesis or a research project in the subject.</p>
+        </div>
       </section>
     </main>
   </div>
@@ -288,6 +222,19 @@
   <script id="publications-data" type="application/json">
     {
       "publications": [
+        {
+          "title": "Visual Autoregressive Modelling for Monocular Depth Estimation",
+          "authors": "A El-Ghoussani, A Kaup, N Navab, G Carneiro, V Belagiannis",
+          "venue": "International Conference on Computer Vision Theory and Applications (VISAPP), accepted (Nov 2025)",
+          "conference": "VISAPP",
+          "year": 2025,
+          "cover": "https://arxiv.org/html/2512.22653v1/cond_finetuning.jpg",
+          "resources": [
+            { "label": "arXiv", "url": "https://arxiv.org/abs/2512.22653" },
+            { "label": "PDF", "url": "https://arxiv.org/pdf/2512.22653" },
+            { "label": "Code", "url": "https://github.com/AmirMaEl/VAR-Depth" }
+          ]
+        },
         {
           "title": "Revisiting Gradient-Based Uncertainty for Monocular Depth Estimation",
           "authors": "J Hornauer, A El-Ghoussani, V Belagiannis",
@@ -332,112 +279,7 @@
     }
   </script>
   <script src="scripts/publications.js" defer></script>
-  <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      var yearEl = document.getElementById('current-year');
-      if (yearEl) {
-        yearEl.textContent = new Date().getFullYear();
-      }
 
-      var projectsGrid = document.querySelector('[data-projects-grid]');
-      if (projectsGrid) {
-        var projectCards = Array.prototype.slice.call(projectsGrid.querySelectorAll('[data-project-year]'));
-        projectCards.sort(function (a, b) {
-          var yearA = parseInt(a.getAttribute('data-project-year'), 10) || 0;
-          var yearB = parseInt(b.getAttribute('data-project-year'), 10) || 0;
-          if (yearA === yearB) {
-            var orderA = (a.getAttribute('data-project-order') || '').toLowerCase();
-            var orderB = (b.getAttribute('data-project-order') || '').toLowerCase();
-            return orderA.localeCompare(orderB);
-          }
-          return yearB - yearA;
-        });
-        for (var k = 0; k < projectCards.length; k++) {
-          projectsGrid.appendChild(projectCards[k]);
-        }
-      }
-
-      var namePattern = /(Amir El-Ghoussani|A\.?\s?El-Ghoussani)/g;
-
-      function underlineTextNode(textNode) {
-        if (!textNode || !textNode.nodeValue || !textNode.parentNode) {
-          return;
-        }
-        var parentElement = textNode.parentElement;
-        if (parentElement && parentElement.closest && parentElement.closest('.publication-author--self')) {
-          return;
-        }
-        namePattern.lastIndex = 0;
-        if (!namePattern.test(textNode.nodeValue)) {
-          return;
-        }
-        namePattern.lastIndex = 0;
-        var text = textNode.nodeValue;
-        var fragment = document.createDocumentFragment();
-        var lastIndex = 0;
-        var match;
-        while ((match = namePattern.exec(text)) !== null) {
-          if (match.index > lastIndex) {
-            fragment.appendChild(document.createTextNode(text.slice(lastIndex, match.index)));
-          }
-          var span = document.createElement('span');
-          span.className = 'publication-author--self';
-          span.textContent = match[0];
-          fragment.appendChild(span);
-          lastIndex = namePattern.lastIndex;
-        }
-        if (lastIndex < text.length) {
-          fragment.appendChild(document.createTextNode(text.slice(lastIndex)));
-        }
-        textNode.parentNode.replaceChild(fragment, textNode);
-      }
-
-      function underlineWithin(root) {
-        if (!root) {
-          return;
-        }
-        if (root.nodeType === Node.TEXT_NODE) {
-          underlineTextNode(root);
-          return;
-        }
-        var walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT, null, false);
-        var textNodes = [];
-        var currentNode = walker.nextNode();
-        while (currentNode) {
-          textNodes.push(currentNode);
-          currentNode = walker.nextNode();
-        }
-        for (var i = 0; i < textNodes.length; i++) {
-          underlineTextNode(textNodes[i]);
-        }
-      }
-
-      var publicationsSection = document.getElementById('publications');
-      if (!publicationsSection) {
-        return;
-      }
-
-      underlineWithin(publicationsSection);
-
-      var listTarget = publicationsSection.querySelector('[data-publications-list]');
-      if (listTarget && 'MutationObserver' in window) {
-        var observer = new MutationObserver(function (mutations) {
-          for (var i = 0; i < mutations.length; i++) {
-            var mutation = mutations[i];
-            for (var j = 0; j < mutation.addedNodes.length; j++) {
-              var addedNode = mutation.addedNodes[j];
-              if (addedNode.nodeType === Node.TEXT_NODE) {
-                underlineTextNode(addedNode);
-              } else if (addedNode.nodeType === Node.ELEMENT_NODE) {
-                underlineWithin(addedNode);
-              }
-            }
-          }
-        });
-        observer.observe(listTarget, { childList: true, subtree: true });
-      }
-    });
-  </script>
 </body>
 </html>
 
