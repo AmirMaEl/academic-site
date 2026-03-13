@@ -78,6 +78,13 @@
       header.appendChild(badge);
     }
 
+    if (publication.award) {
+      const award = document.createElement("span");
+      award.className = "publication-card__award";
+      award.textContent = `★ ${publication.award}`;
+      header.appendChild(award);
+    }
+
     const titleEl = document.createElement("h3");
     titleEl.className = "publication-card__title";
     titleEl.textContent = publication.title;
